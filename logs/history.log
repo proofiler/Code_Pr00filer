@@ -1,0 +1,1792 @@
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7187112
+Engine version: 0.102.3
+Scanned directories: 4
+Scanned files: 6
+Infected files: 1
+Data scanned: 1.12 MB
+Data read: 0.81 MB (ratio 1.38:1)
+Time: 12.332 sec (0 m 12 s)
+----------- VIRUS LIST -----------
+/media/pi/usb/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/usb/Blackenergy.bin/media/pi/usb/ducky/script.bin
+2 fichiers ont étés détectés et supprimés
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7187112
+Engine version: 0.102.3
+Scanned directories: 4
+Scanned files: 6
+Infected files: 1
+Data scanned: 1.12 MB
+Data read: 0.81 MB (ratio 1.38:1)
+Time: 12.457 sec (0 m 12 s)
+----------- VIRUS LIST -----------
+/media/pi/usb/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/usb/Blackenergy.bin/media/pi/usb/ducky/script.bin/media/pi/usb/ducky/virus.dll
+3 fichiers ont étés détectés et supprimés
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7187112
+Engine version: 0.102.3
+Scanned directories: 4
+Scanned files: 6
+Infected files: 1
+Data scanned: 1.12 MB
+Data read: 0.81 MB (ratio 1.38:1)
+Time: 15.608 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/usb/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/usb/Blackenergy.bin
+/media/pi/usb/ducky/script.bin
+/media/pi/usb/ducky/virus.dll
+
+3 fichiers ont étés détectés et supprimés
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 9
+Infected files: 1
+Data scanned: 258.05 MB
+Data read: 215.62 MB (ratio 1.20:1)
+Time: 108.111 sec (1 m 48 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 9
+Infected files: 1
+Data scanned: 258.05 MB
+Data read: 215.62 MB (ratio 1.20:1)
+Time: 97.922 sec (1 m 37 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 5
+Infected files: 1
+Data scanned: 202.69 MB
+Data read: 70.92 MB (ratio 2.86:1)
+Time: 71.285 sec (1 m 11 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 5
+Infected files: 1
+Data scanned: 202.69 MB
+Data read: 70.92 MB (ratio 2.86:1)
+Time: 69.630 sec (1 m 9 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.405 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.324 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.422 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.085 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.764 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.777 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.772 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.737 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.816 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.903 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.839 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.942 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.044 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.938 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.568 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.806 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.818 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.717 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.735 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.684 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.670 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.630 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.064 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.899 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.755 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.031 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 20.778 sec (0 m 20 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.510 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.271 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.945 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.034 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.596 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.959 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.914 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.140 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.717 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.900 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.277 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.728 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.924 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 15.718 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.049 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.503 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.403 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 16.187 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.796 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 16.194 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.049 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.641 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.450 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 16.616 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 16.344 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 16.163 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.336 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 15.373 sec (0 m 15 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 16.141 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+/media/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+/media/pi/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/Blackenergy.bin - AVG : VBA:Downloader-AAH [Trj]
+/media/pi/Blackenergy.bin - Ad-Aware : X97M.Dropper.C
+/media/pi/Blackenergy.bin - AegisLab : Trojan.MSWord.Agent.b!c
+/media/pi/Blackenergy.bin - AhnLab-V3 : X97M/Downloader
+/media/pi/Blackenergy.bin - Arcabit : X97M.Dropper.C
+/media/pi/Blackenergy.bin - Avast : VBA:Downloader-AAH [Trj]
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/Blackenergy.bin
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 16.382 sec (0 m 16 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/test.bin
+/media/pi/android/wala.bin
+/media/pi/android/wala.exe
+
+3 fichiers ont étés détectés et supprimés
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 17.551 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 17.419 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.858 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/android/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/android/wala.bin
+/media/pi/android/wala.exe
+/media/pi/android/wala.ps1
+
+3 fichiers ont étés détectés et supprimés
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.926 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/android/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+/media/pi/android/wala.ps1
+
+1 fichier a été détecté et supprimé
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.655 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/android/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 17.375 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 2
+Infected files: 1
+Data scanned: 1.29 MB
+Data read: 1.13 MB (ratio 1.14:1)
+Time: 17.833 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+/media/pi/android/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 17.445 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+Fichiers potentiellement dangereux : 
+0
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 17.678 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichiers dangereux n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 7524177
+Engine version: 0.102.3
+Scanned directories: 2
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.88 MB
+Data read: 0.43 MB (ratio 2.05:1)
+Time: 17.677 sec (0 m 17 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichier avec une extension dangeureuse n'a été détecté
+----------- END OF REPORT -----------
