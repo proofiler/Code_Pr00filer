@@ -41,7 +41,7 @@ $ sudo apt-get install qttools5-dev-tools
 **Installation  librairies Python3**
 ```
 pi@raspberrypi:$ pip3 install sip
-pi@raspberrypi:$ pip3 install --upgrade pip'
+pi@raspberrypi:$ pip3 install --upgrade pip
 pi@raspberrypi:$ pip3 install requests
 ```
 
@@ -60,6 +60,14 @@ pi@raspberrypi:/media $ sudo chmod a+rwx pi/
 **Installation ClamScan avec le script**
 ```
 i@raspberrypi:/opt/ProjetAnnuel/scripts $ ./install_conf_clamav.sh 
+```
+---
+
+**Installation de l'application avec git**
+```
+cd /opt/
+sudo git clone https://github.com/Pr00filer/Code_Pr00filer.git
+sudo chown -R pi Code_Pr00filer
 ```
 
 ---
@@ -101,15 +109,6 @@ WantedBy=multi-user.target
 ```
 sudo systemctl enable insertUSB.service
 sudo service insertUSB start
-```
-
----
-
-**Installation de l'application avec git**
-```
-cd /opt/
-sudo git clone https://github.com/Pr00filer/Code_Pr00filer.git
-sudo chown -R pi Code_Pr00filer
 ```
 
 ---
