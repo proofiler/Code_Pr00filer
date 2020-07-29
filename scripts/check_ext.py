@@ -11,7 +11,7 @@ import os
 # -------- Programme Principal --------
 def main_checkExt():
     path="/media/pi/"
-    core_path="/opt/ProjetAnnuel"
+    core_path="/opt/Code_Pr00filer"
     a=0
     with open(core_path+"/logs/report.log","a") as report:
         report.write("----------- EXTENTIONS -----------\n")

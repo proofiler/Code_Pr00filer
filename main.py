@@ -16,7 +16,7 @@ from scripts import *
 pathUSB = "/media/pi"
 
 # Chemin vers les scripts
-pathCORE = "/opt/ProjetAnnuel"
+pathCORE = "/opt/Code_Pr00filer"
 
 class Worker(QRunnable):
     def __init__(self, fn, *args, **kwargs):

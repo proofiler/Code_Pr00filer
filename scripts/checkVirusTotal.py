@@ -6,7 +6,7 @@ import hashlib
 import requests
 
 usb_path = "/media/pi/"
-core_path = "/opt/ProjetAnnuel/"
+core_path = "/opt/Code_Pr00filer/"
 def get_files(a_directory_name):
 	'''Get all files of the USB
 
