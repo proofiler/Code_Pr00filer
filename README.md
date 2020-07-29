@@ -66,15 +66,16 @@ i@raspberrypi:/opt/ProjetAnnuel/scripts $ ./install_conf_clamav.sh
 
 **Création de la règle UDEV**
 ```
-sudo vim /etc/udev/rules.d/11-media-by-label-auto-mount.rules
+sudo vim /etc/udev/rules.d/11-automout.rules
 ```
 
 ```
 ACTION=="add", SUBSYSTEM=="block", ENV{SYSTEMD_WANTS}+="insertUSB.service"
+ACTION=="remove", SYBSYSTEM=="block", RUN+="/opt/Code_Pr00filer/scripts/removeUSB.sh"
 ```
 
 ```
-sudo udevadm controle --reload
+sudo udevadm control --reload
 ```
 
 ---
@@ -107,8 +108,8 @@ sudo service insertUSB start
 **Installation de l'application avec git**
 ```
 cd /opt/
-sudo git clone https://github.com/RedFou52/ProjetAnnuel.git
-sudo chown pi ProjetAnnuel
+sudo git clone https://github.com/Pr00filer/Code_Pr00filer.git
+sudo chown -R pi Code_Pr00filer
 ```
 
 ---
