@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="block", ENV{SYSTEMD_WANTS}+="insertUSB.service"
+ACTION=="remove", SUBSYSTEM=="block",RUN+="/opt/Code_Pr00filer/scripts/removeUSB.sh"
