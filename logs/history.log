@@ -1827,3 +1827,79 @@ Virus : None
 
 3 fichiers ont étés détectés et supprimés
 ----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Known viruses: 8262439
+Engine version: 0.102.3
+Scanned directories: 6
+Scanned files: 3
+Infected files: 0
+Data scanned: 0.00 MB
+Data read: 0.00 MB (ratio 0.00:1)
+Time: 54.082 sec (0 m 54 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichier avec une extension dangeureuse n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Infected files: 0
+Time: 0.052 sec (0 m 0 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichier avec une extension dangeureuse n'a été détecté
+----------- END OF REPORT -----------
+/media/pi/USBT/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+/media/pi/USBT/Blackenergy.bin: Removed.
+
+----------- SCAN SUMMARY -----------
+Infected files: 1
+Time: 1.815 sec (0 m 1 s)
+----------- VIRUS LIST -----------
+/media/pi/USBT/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+/media/pi/USBT/TTO/TUTU/test.msi
+/media/pi/USBT/TTO/TUTU/test.ps1
+
+2 fichiers ont étés détectés et supprimés
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Infected files: 0
+Time: 0.004 sec (0 m 0 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichier avec une extension dangeureuse n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Infected files: 0
+Time: 0.010 sec (0 m 0 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichier avec une extension dangeureuse n'a été détecté
+----------- END OF REPORT -----------
+
+----------- SCAN SUMMARY -----------
+Infected files: 0
+Time: 0.010 sec (0 m 0 s)
+----------- VIRUS LIST -----------
+Virus : None
+----------- VIRUS TOTAL -----------
+----------- EXTENTIONS -----------
+
+Aucun fichier avec une extension dangeureuse n'a été détecté
+----------- END OF REPORT -----------
