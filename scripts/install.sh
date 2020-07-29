@@ -39,7 +39,8 @@ sudo freshclam
 
 # Creation de la règle UDEV
 echo "Creation de la règle UDEV"
-sudo cp /opt/Code_Pr00filer/doc/11-insert-remove-USB.rules /etc/udev/rules.d/11-insert-remove-USB.rules
+sudo cp /opt/Code_Pr00filer/doc/11-insert.rules /etc/udev/rules.d/11-insert.rules
+sudo cp /opt/Code_Pr00filer/doc/11-remove.rules /etc/udev/rules.d/11-remove.rules
 sudo udevadm control --reload
 
 # Création du SERVICE insertUSB

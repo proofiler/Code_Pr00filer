@@ -82,7 +82,7 @@ class MainWindow(QMainWindow):
         self.progressBar.setValue(15)
         # On execute le scan et on sauvegarde l'output dans lastScan.log, le fichier est crée car il n'existe pas
         with open(pathCORE+"/logs/lastScan.log","w") as f:
-            bashCommand = "clamdscan -v -i --remove "+pathUSB
+            bashCommand = "clamscan -v -i -r --remove "+pathUSB
             subprocess.call(bashCommand.split(), stdout=f)
         self.progressBar.setValue(35)
         with open(pathCORE+"/logs/lastScan.log") as logFile:
@@ -168,8 +168,8 @@ class Second(QMainWindow):
         os.remove(pathCORE+"/logs/report.log")
             
         # Umount USB
-       #bashCommand = "sudo umount /media/pi/*"
-       #subprocess.call(bashCommand.split())
+       # bashCommand = "sudo umount /media/pi"
+       # subprocess.call(bashCommand.split())
 
 
     # Fonction qui permet d'afficher le rapport final
