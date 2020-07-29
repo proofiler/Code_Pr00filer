@@ -17,8 +17,11 @@ Réalisation d'un station de décontamination automatique des clés USB.
 
 Tous les fichiers non conformes sont supprimés.  
 
-## Procédure d'installation :
+## Procédure d'installation avec un script :
 
+Il vous suffit d'executer le scripts `install.sh` dans `scripts/`
+
+## Procédure d'installation manuelle :
 **Pré-requis**
 - Raspbian Buster
 - Raspberry Pi4 (2GB ou plus)
@@ -57,17 +60,18 @@ pi@raspberrypi:/media $ sudo chmod a+rwx pi/
 
 ---
 
-**Installation ClamScan avec le script**
-```
-i@raspberrypi:/opt/ProjetAnnuel/scripts $ ./install_conf_clamav.sh 
-```
----
-
 **Installation de l'application avec git**
 ```
 cd /opt/
 sudo git clone https://github.com/Pr00filer/Code_Pr00filer.git
 sudo chown -R pi Code_Pr00filer
+```
+
+---
+
+**Installation ClamScan avec le script**
+```
+i@raspberrypi:/opt/Code_Pr00filer/scripts $ ./install_conf_clamav.sh 
 ```
 
 ---
@@ -99,8 +103,9 @@ Description= When a USB stick is plugged
 
 [Service]
 Type=oneshot
+
 Environment=DISPLAY=:0
-ExecStart=/opt/ProjetAnnuel/scripts/insertUSB.sh
+ExecStart=/opt/Code_Pr00filer/scripts/insertUSB.sh
 
 [Install]
 WantedBy=multi-user.target

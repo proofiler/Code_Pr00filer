@@ -1,0 +1,11 @@
+[Unit]
+Description= When a USB stick is plugged
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0
+ExecStart=/opt/Code_Pr00filer/scripts/insertUSB.sh
+
+[Install]
+WantedBy=multi-user.target
+
