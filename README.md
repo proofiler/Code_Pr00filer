@@ -69,21 +69,31 @@ sudo chown -R pi Code_Pr00filer
 
 ---
 
-**Installation ClamScan avec le script**
+**Installation ClamScan avec le daemon **
 ```
-i@raspberrypi:/opt/Code_Pr00filer/scripts $ ./install_conf_clamav.sh 
+sudo apt install clamav clamdscan clamav-daemon -y
+sudo killall freshclam
+sudo freshclam
 ```
 
 ---
 
-**Création de la règle UDEV**
+**Création de la règle UDEV au montage de la clé**
 ```
-sudo vim /etc/udev/rules.d/11-automout.rules
+sudo vim /etc/udev/rules.d/11-insert.rules
 ```
 
 ```
 ACTION=="add", SUBSYSTEM=="block", ENV{SYSTEMD_WANTS}+="insertUSB.service"
-ACTION=="remove", SYBSYSTEM=="block", RUN+="/opt/Code_Pr00filer/scripts/removeUSB.sh"
+```
+
+**Création de la règle UDEV au démontage de la clé**
+```
+sudo vim /etc/udev/rules.d/11-remove.rules
+```
+
+```
+ACTION=="remove", SUBSYSTEM=="block",RUN+="/opt/Code_Pr00filer/scripts/removeUSB.sh"
 ```
 
 ```
