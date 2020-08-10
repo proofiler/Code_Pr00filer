@@ -1,34 +1,26 @@
-# Projet Annuel : Réalisation d'un station blanche
-
-## Groupe 20 - 4SI4:
-
-- Jennifer BONILLO
-- Kevin PETTA
-- Joris VAILLAND
-- Adrien LASALLE
+# Pr00filer - Station Blanche / Station de décontamination des clés USB
 
 ## Contexte :
 
-Réalisation d'un station de décontamination automatique des clés USB.  
+Réalisation d'une station de décontamination automatique des clés USB.  
 
-- Vérification des virus avec clamAV
-- Vérification des hashs de fichiers avec VirusTotal
-- Vérification des extensions de fichiers
+- Vérification des fichiers malveillant avec l'anti-virus clamAV.
+- Vérification des hashs de fichiers avec VirusTotal.
+- Vérification des extensions des fichiers pr"sent sur la clé USB.
 
-Tous les fichiers non conformes sont supprimés.  
+Tous les fichiers non conformes seront supprimés sans confirmation.  
+
+## Pré-requis :
+- Raspbian Buster
+- Raspberry Pi4 (2GB ou plus)
+- Connexion Internet (Wi-Fi ou Ethernet)
+- Avoir les droits root
 
 ## Procédure d'installation avec un script :
 
 Il vous suffit d'executer le scripts `install.sh` dans `scripts/`
 
 ## Procédure d'installation manuelle :
-**Pré-requis**
-- Raspbian Buster
-- Raspberry Pi4 (2GB ou plus)
-- Connexion Internet
-- Avoir les droits root
-
----
 
 **Installation PyQt5**
 ```
@@ -69,7 +61,7 @@ sudo chown -R pi Code_Pr00filer
 
 ---
 
-**Installation ClamScan avec le daemon **
+**Installation ClamScan avec le daemon**
 ```
 sudo apt install clamav clamdscan clamav-daemon -y
 sudo killall freshclam
