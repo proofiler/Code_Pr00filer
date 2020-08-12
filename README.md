@@ -66,6 +66,7 @@ sudo chown -R pi Code_Pr00filer
 sudo apt install clamav clamdscan clamav-daemon -y
 sudo killall freshclam
 sudo freshclam
+sudo service clamav-daemon start
 ```
 
 ---
