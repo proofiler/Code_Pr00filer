@@ -1,5 +1,10 @@
 # Pr00filer - Station Blanche / Station de décontamination des clés USB
 
+## À savoir :
+Ce projet est toujours en cours de développement.  
+Les images de sensibilation utilisée pour le moment proviennent du projet [USBGuardian](https://github.com/USBGuardian/USBGuardian) afin de servir d'exemple.
+
+
 ## Contexte :
 
 Réalisation d'une station de décontamination automatique des clés USB.  
