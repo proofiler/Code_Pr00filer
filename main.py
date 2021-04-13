@@ -142,6 +142,10 @@ class Second(QMainWindow):
         self.virus = QLabel(self)
         self.virus.move(10,25)
 
+        # Label Nombre d'erreurs
+        self.errors = QLabel(self)
+        self.errors.move(10,35)
+
         # Label Nombre de fichiers analysés
         self.nbfile =  QLabel(self)
         self.nbfile.move(10,40)
@@ -182,18 +186,19 @@ class Second(QMainWindow):
             VirusLine = ""
             VirusTotalLine = ""
             ExtensionsLine = ""
-
+            JSON_list = [] # nombre de fichiers ; nombre de virus ; temps du scan
             # Parcours du fichier report.log
             for line in report:
                 
-                if "Scanned files:" in line: # Récupère le nombre de fichiers
-                    nb_file_split = line.split(" ")
-                    self.nbfile.setText("Fichiers Analysés : "+nb_file_split[2])
-                    self.nbfile.adjustSize()
+                # Récupère le nombre de fichiers
+                nb_files = getNumberOfFiles(pathUSB)
+                self.nbfile.setText("Fichiers Analysés : "+str(nb_files))
+                self.nbfile.adjustSize()
 
                 if "Infected" in line: # Récupère le nombre de Virus
-                    virusnb = line.split(" ")
-                    self.virus.setText("Nombre de Virus : "+virusnb[2])
+                    virusnb_split = line.split(" ")
+                    virusnb = virusnb_split[2]
+                    self.virus.setText("Nombre de Virus : "+virusnb)
                     self.virus.adjustSize() 
                     #Check virus et modification de l'image en conséquence
                     if virusnb[2] != 0:
@@ -201,9 +206,16 @@ class Second(QMainWindow):
                     else:
                         self.warning.setPixmap(QPixmap(pathCORE+"/assets/ok.png"))
 
+                if "Total errors:" in line: # Récupère les erreurs et affiche un message
+                    errors_line = line.split()
+                    errors_count = errors_line[2]
+                    self.errors.setText("Une erreur est survenue pendant l'analyse antivirale !")
+                    self.errors.adjustSize()
+
                 if "Time:" in line: # Récupère le temps du scan
-                    time = line.split(" ")
-                    self.time.setText("Temps du Scan : "+time[1]+" secondes")
+                    time_split = line.split(" ")
+                    time_scan = time_split[1]
+                    self.time.setText("Temps du Scan : "+time_scan+" secondes")
                     self.time.adjustSize() 
                 # SI on arrive à END OD REPORT, c'est la fin
                 # Du coup on setText les QLabels
@@ -241,7 +253,17 @@ class Second(QMainWindow):
                 # ON parcours les virus et on les ajoute dans notre variable
                 if VirusList == 1:
                     VirusLine += line+'\n'
-                
+        # Ajout des info dans JSON_list
+        JSON_list.append(nb_files)
+        JSON_list.append(virusnb)
+        JSON_list.append(time_scan)
+        JSON_list.append(getId_USB())
+        JSON_list.append(errors_count)
+        # On envoie la request POST au serveur
+        createRequest(JSON_list)
+
+
+
         
 
 if __name__ == '__main__':
