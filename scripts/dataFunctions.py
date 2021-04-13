@@ -5,7 +5,7 @@ import os
 import hashlib
 import requests
 import subprocess
-from difflib import Differ
+import json
 
 def bash_cmd(cmd):
     """
@@ -26,10 +26,10 @@ def getNumberOfFiles(a_path):
     for filename in os.listdir(a_path):
         path = os.path.join(a_path, filename)
 
-        if os.path.isfile(path)
+        if os.path.isfile(path):
             count += 1
-        elif os.paht.isdir(path)
-            count += fileCount(path)
+        elif os.path.isdir(path):
+            count += getNumberOfFiles(path)
     return count
 
 
@@ -44,32 +44,56 @@ def getId_USB():
 
     origin_file = "/opt/Code_Pr00filer/doc/lsusb-empty.txt"
     compare_file = "/tmp/lsusb-output.txt"
+    id_origin = []
+    id_compare = []
+    id_USB = "none"
 
     # Save the lsusb output into temp file
     with open("/tmp/lsusb-output.txt","w") as f:
         bashCommand = "lsusb"
         subprocess.call(bashCommand.split(), stdout=f)
     
-    # Compare the two file and display the USB line
-    with open(origin_file) as file_1, open(compare_file) as file_2:
-        differ = Differ()
-        for line in differ.compare(file_1.readlines(), file_2.readlines()):
-            if line[0] == "+":
-                USB_line = line
-    USB_line = USB_line.split()
-    return USB_line[6]
+    with open(origin_file,'r') as file_1:
+        for line in file_1:
+            line_split = line.split()
+            id_usb = line_split[5]
+            id_origin.append(id_usb)
+    with open(compare_file, 'r') as file_2:
+        for line in file_2:
+            line_split = line.split()
+            id_usb = line_split[5]
+            id_compare.append(id_usb)
+    for item in id_compare:
+        if item not in id_origin:
+            id_USB = item
+    return id_USB
 
 def createRequest(JSON_list):
 
-nbfile = JSON_list[0]
-nbVirus = JSON_list[1]
-time_scan = JSON_list[2]
-uuid_usb = JSON_list[3]
-errors_scan = JSON_list[4]
+    nbfile = JSON_list[0]
+    nbVirus = JSON_list[1]
+    time_scan = JSON_list[2]
+    uuid_usb = JSON_list[3]
+    errors_scan = JSON_list[4]
 
-file_open = open("/opt/Code_Pr00filer/doc/hash_user.txt")
-hash_user = file_open.read()
+    file_open = open("/opt/Code_Pr00filer/doc/hash_user.txt")
+    hash_user = file_open.read()
+    file_open.close()
 
-payload = {"login": "ADMIN", "hash":hash_user, "nbFiles" : nbfile, "nbVirus":nbVirus, "timeScan"; time_scan, "UUIDKey":uuid_usb, "Errors": errors_scan}
+    payload = {}
+    payload['login'] = "ADMIN"
+    payload['hash'] = hash_user 
+    payload['nbFiles'] = nbfile
+    payload['nbVirus'] = nbVirus
+    payload['timeScan'] = time_scan 
+    payload['UUIDKey'] = uuid_usb
+    payload['Errors'] =  errors_scan
+    json_data = json.dumps(payload)
 
-r = requests.post('http://192.168.1.90:8000', json=payload)
+    #r = requests.post('http://192.168.1.90:8000', json=payload)
+
+    test = open("/home/pi/tutu.log", 'w')
+    test.write(json_data)
+    test.close()
+
+

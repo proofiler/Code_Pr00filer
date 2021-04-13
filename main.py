@@ -148,7 +148,7 @@ class Second(QMainWindow):
 
         # Label Nombre de fichiers analysés
         self.nbfile =  QLabel(self)
-        self.nbfile.move(10,40)
+        self.nbfile.move(10,45)
 
         # Label pour afficher la liste des Virus
         self.viruslist = QLabel(self)
@@ -164,7 +164,7 @@ class Second(QMainWindow):
             
         # Label image Warning/ok
         self.warning = QLabel(self)
-        self.warning.move(200,10)
+        self.warning.move(250,10)
         self.Display()
         
         # Suppression report.log et lastScan.log pour les prochains scans
@@ -186,12 +186,13 @@ class Second(QMainWindow):
             VirusLine = ""
             VirusTotalLine = ""
             ExtensionsLine = ""
+            errors_count = "0"
             JSON_list = [] # nombre de fichiers ; nombre de virus ; temps du scan
             # Parcours du fichier report.log
             for line in report:
                 
                 # Récupère le nombre de fichiers
-                nb_files = getNumberOfFiles(pathUSB)
+                nb_files = dataFunctions.getNumberOfFiles(pathUSB)
                 self.nbfile.setText("Fichiers Analysés : "+str(nb_files))
                 self.nbfile.adjustSize()
 
@@ -199,9 +200,10 @@ class Second(QMainWindow):
                     virusnb_split = line.split(" ")
                     virusnb = virusnb_split[2]
                     self.virus.setText("Nombre de Virus : "+virusnb)
-                    self.virus.adjustSize() 
+                    self.virus.adjustSize()
+                    virusnb = virusnb.rstrip("\n")
                     #Check virus et modification de l'image en conséquence
-                    if virusnb[2] != 0:
+                    if int(virusnb) != 0:
                         self.warning.setPixmap(QPixmap(pathCORE+"/assets/warning.png"))
                     else:
                         self.warning.setPixmap(QPixmap(pathCORE+"/assets/ok.png"))
@@ -257,10 +259,10 @@ class Second(QMainWindow):
         JSON_list.append(nb_files)
         JSON_list.append(virusnb)
         JSON_list.append(time_scan)
-        JSON_list.append(getId_USB())
+        JSON_list.append(dataFunctions.getId_USB())
         JSON_list.append(errors_count)
         # On envoie la request POST au serveur
-        createRequest(JSON_list)
+        dataFunctions.createRequest(JSON_list)
 
 
 
