@@ -5,19 +5,31 @@ import random, subprocess, os
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QTimer, QRunnable, QThreadPool, pyqtSlot, QFile, QIODevice, QTextStream, QRect 
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QLabel, QProgressBar, QWidget, QFileDialog, QPlainTextEdit)
-# ----- Scripts ------#
+# ----- Scripts ------ #
 from scripts import *
 
 # fichier lastScan.log : Va contenir provisoirement le dernier scan, le fichier est vidé à chaque debut de scan
 # fichier report.log : Va contenir provisoirement le rapport final qui sera afficher à l'utilisateur à la fin du scan, le fichier est vidé à la fin du scan
 # fichier history.log : Va être rempli avec les report.log à la fin de chaque scan
 
-# Chemin vers USB à Scanner
-pathUSB = "/media/pi"
+# ------ Globals ------ #
 
-# Chemin vers les scripts
-pathCORE = "/opt/Code_Pr00filer"
+# Get the absolut path of the config file
+ConfigPathFile = configFunctions.getConfigPathFile()
 
+# Get the absolut path for the scan
+pathUSB = configFunctions.getPathScan(ConfigPathFile)
+
+# Get the absolut path for the source code
+pathCORE = configFunctions.getPathSource(ConfigPathFile)
+
+# Get the modules check
+VirusTotalActive = configFunctions.getCheckVirusTotalScript(ConfigPathFile)
+CheckExtensionsActive = configFunctions.getCheckExtensionsScript(ConfigPathFile)
+
+
+
+# ------ Main code ------ #
 class Worker(QRunnable):
     def __init__(self, fn, *args, **kwargs):
         super(Worker, self).__init__()
@@ -259,7 +271,7 @@ class Second(QMainWindow):
         JSON_list.append(nb_files)
         JSON_list.append(virusnb)
         JSON_list.append(time_scan)
-        JSON_list.append(dataFunctions.getId_USB())
+        JSON_list.append(dataFunctions.getUUID())
         JSON_list.append(errors_count)
         # On envoie la request POST au serveur
         dataFunctions.createRequest(JSON_list)
@@ -272,7 +284,7 @@ if __name__ == '__main__':
     import sys
 
     app = QApplication([])
-    app.setStyle('/opt/Code_Pr00filer/doc/dark_theme.qss')
+    #app.setStyle('/opt/Code_Pr00filer/doc/dark_theme.qss')
     mainWindow = MainWindow()
     mainWindow.show()
 

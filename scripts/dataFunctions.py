@@ -6,6 +6,16 @@ import hashlib
 import requests
 import subprocess
 import json
+import base64
+from configFunctions import *
+
+# ------ Globals ------ #
+ConfigPathFile = getConfigPathFile()
+usb_path=getPathScan(ConfigPathFile)
+core_path=getPathSource(ConfigPathFile)
+hash_path=getFileAdminHash(ConfigPathFile)
+admin_name=getNameAdmin(ConfigPathFile)
+AddrServer = getAddrServer(ConfigPathFile+hash_path)
 
 def bash_cmd(cmd):
     """
@@ -35,7 +45,7 @@ def getNumberOfFiles(a_path):
 
 def getId_USB():
     """
-    This function gets the unique ID of the USB plugged.
+    This function gets the vendor ID of the USB plugged.
     Since this is a low level output, we compare the output of the lsusb command with an USB plugged with the output without an usb plugged.
     The diff will be the USB device.
 
@@ -68,6 +78,22 @@ def getId_USB():
             id_USB = item
     return id_USB
 
+def getUUID():
+    """
+    This function return the Unique UUID of the USB key plugged.
+    Return : string
+    """
+    lsblk = subprocess.Popen(('lsblk', '-f'), stdout=subprocess.PIPE)
+    output = subprocess.check_output(('grep', usb_path), stdin=lsblk.stdout)
+    lsblk.wait()
+
+    output_command = output.decode()
+    output_split = output_command.split(" ")
+    output_list = list(dict.fromkeys(output_split))
+    uuid_usb = output_list[4]
+    
+    return uuid_usb
+
 def createRequest(JSON_list):
 
     nbfile = JSON_list[0]
@@ -76,24 +102,27 @@ def createRequest(JSON_list):
     uuid_usb = JSON_list[3]
     errors_scan = JSON_list[4]
 
-    file_open = open("/opt/Code_Pr00filer/doc/hash_user.txt")
-    hash_user = file_open.read()
+    file_open = open(core_path+"/doc/hash_user.txt")
+    hash_user = file_open.read().strip()
     file_open.close()
 
     payload = {}
-    payload['login'] = "ADMIN"
+    payload['login'] = admin_name
     payload['hash'] = hash_user 
-    payload['nbFiles'] = nbfile
-    payload['nbVirus'] = nbVirus
-    payload['timeScan'] = time_scan 
+    payload['nbFiles'] = int(nbfile)
+    payload['nbVirus'] = int(nbVirus)
+    payload['duration'] = int(time_scan) 
     payload['UUIDKey'] = uuid_usb
-    payload['Errors'] =  errors_scan
+    payload['Errors'] =  int(errors_scan)
+
     json_data = json.dumps(payload)
+    json_byte = json_data.encode("ascii")
+    json_base64 = base64.b64encode(json_byte)
+    json_base64 = json_base64.decode("ascii")
 
-    #r = requests.post('http://192.168.1.90:8000', json=payload)
+    mydata = {'data':json_base64 }
 
-    test = open("/home/pi/tutu.log", 'w')
-    test.write(json_data)
-    test.close()
-
-
+    try:
+        r = requests.post(AddrServer, mydata)
+    except:
+        print("Requests.post : Error")

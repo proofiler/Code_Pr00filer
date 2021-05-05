@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 #encoding: UTF-8
 
+
+# -------- imports -------- #
 import os
 import hashlib
 import requests
+from configFunctions import *
 
-usb_path = "/media/pi/"
-core_path = "/opt/Code_Pr00filer/"
+# ------ Globals ------ #
+ConfigPathFile = getConfigPathFile()
+usb_path=getPathScan(ConfigPathFile)
+core_path=getPathSource(ConfigPathFile)
+
 def get_files(a_directory_name):
 	'''Get all files of the USB
 

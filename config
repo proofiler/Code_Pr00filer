@@ -1,0 +1,27 @@
+# PATH_* : Préciser le chemin absolue 
+# ADDR_* : Préciser une adresse IPV4 ou none s'il n'y a aucun serveur
+# FILE_* : Préciser le chemin absolue vers un fichier
+# CHECK_*: Préciser True ou False
+##################################
+# Version
+VERSION = 1.0
+# Path of the source code : default /opt/Code_Pr00filer/
+PATH_SOURCE = /opt/Code_Pr00filer/
+# Path in wich the usb is mounted and scanned : default /media/pi
+PATH_SCAN = /media/pi
+# Main user for the raspberry : default pi
+NAME_USER = pi
+# IP address of the main server to send all the data into the database
+ADDR_SERVER_PORT = http://192.168.1.10:8080/data
+# Name of the user used to send data to the database
+NAME_ADMIN = raspberry@pr00filer.com
+# Path of the file that contains the hash to authenticate the user for the database : default /doc/hash_user.txt
+FILE_ADMIN_HASH = doc/hash_user.txt
+# Execute or not the VirusTotal check : default True
+CHECK_VIRUSTOTAL_SCRIPT = True
+# Execute or not the Extension check : default True
+CHECK_EXTENSIONS_SCRIPT = True
+# Liste of all the extensions that are check and deleted into the USB.
+DATA_EXTENSIONS_DELETE = .ps1,.bin,.exe,.dll,.msi
+# to do : 
+# ordre d'analyse -> check ext , clamav, virus total
