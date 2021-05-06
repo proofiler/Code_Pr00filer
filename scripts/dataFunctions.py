@@ -7,7 +7,7 @@ import requests
 import subprocess
 import json
 import base64
-from configFunctions import *
+from .configFunctions import *
 
 # ------ Globals ------ #
 ConfigPathFile = getConfigPathFile()
@@ -15,7 +15,7 @@ usb_path=getPathScan(ConfigPathFile)
 core_path=getPathSource(ConfigPathFile)
 hash_path=getFileAdminHash(ConfigPathFile)
 admin_name=getNameAdmin(ConfigPathFile)
-AddrServer = getAddrServer(ConfigPathFile+hash_path)
+AddrServer = getAddrServer(ConfigPathFile)
 
 def bash_cmd(cmd):
     """
@@ -105,24 +105,28 @@ def createRequest(JSON_list):
     file_open = open(core_path+"/doc/hash_user.txt")
     hash_user = file_open.read().strip()
     file_open.close()
-
+    time_float = float(time_scan)
+    time_int = int(time_float)
     payload = {}
     payload['login'] = admin_name
     payload['hash'] = hash_user 
     payload['nbFiles'] = int(nbfile)
     payload['nbVirus'] = int(nbVirus)
-    payload['duration'] = int(time_scan) 
-    payload['UUIDKey'] = uuid_usb
-    payload['Errors'] =  int(errors_scan)
-
+    payload['duration'] = int(time_int) 
+    payload['uuidUsb'] = uuid_usb
+    payload['nbErrors'] =  int(errors_scan)
+    
+    print(payload)
+        
     json_data = json.dumps(payload)
     json_byte = json_data.encode("ascii")
     json_base64 = base64.b64encode(json_byte)
     json_base64 = json_base64.decode("ascii")
 
-    mydata = {'data':json_base64 }
-
-    try:
-        r = requests.post(AddrServer, mydata)
-    except:
-        print("Requests.post : Error")
+    mydata = { 'data' : json_base64 }
+    print(AddrServer)
+    print(mydata)
+    #try:
+    r = requests.post(AddrServer, mydata)
+    #except:
+    #print("Requests.post : Error")

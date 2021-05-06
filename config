@@ -12,7 +12,7 @@ PATH_SCAN = /media/pi
 # Main user for the raspberry : default pi
 NAME_USER = pi
 # IP address of the main server to send all the data into the database
-ADDR_SERVER_PORT = http://192.168.1.10:8080/data
+ADDR_SERVER = http://6f7891518ee5.ngrok.io/Proofiler_web/data
 # Name of the user used to send data to the database
 NAME_ADMIN = raspberry@pr00filer.com
 # Path of the file that contains the hash to authenticate the user for the database : default /doc/hash_user.txt

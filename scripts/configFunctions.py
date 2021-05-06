@@ -7,7 +7,7 @@
 
 
 def getConfigPathFile():
-    ConfigPathFile = "/home/alrikrr/git/Code_Pr00filer/config"
+    ConfigPathFile = "/opt/Code_Pr00filer/config"
     return ConfigPathFile
 
 def getVersion(ConfigPathFile):

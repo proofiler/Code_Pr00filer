@@ -6,7 +6,7 @@
 
 # -------- imports -------- #
 import os
-from configFunctions import *
+from .configFunctions import *
 
 # ------ Globals ------ #
 ConfigPathFile = getConfigPathFile()

@@ -6,7 +6,7 @@
 import os
 import hashlib
 import requests
-from configFunctions import *
+from .configFunctions import *
 
 # ------ Globals ------ #
 ConfigPathFile = getConfigPathFile()
