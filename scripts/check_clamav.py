@@ -27,23 +27,22 @@ def main_clamav(option):
             subprocess.call(bashCommand.split(" "), stdout=f)
 
 def clamav_virus_json():
-    data_json = dataFunctions.init_json()
-     with open(pathCORE+"/logs/tmp_clamav.log","r") as log:
-        if 'FOUND' in log.read():
+    data_json = init_json()
+    with open(pathCORE+"/logs/tmp_clamav.log","r") as log:
              ### --- Récupération des potentiels virus + hash dans un JSON --- ###
-            for line in log:
-                 line_split = ""
-                line_split = line.split(" ")
-                if line_split[-1].strip() == "FOUND":
-                    #line = [0]:PATH,[1]:NAME,[2]:FOUND\n
-                    virus_name = line_split[1] # get the name of the virus from clamav log
-                    virus_path = line_split[0] # get the full path of the virus clamav lof
-                    virus_hash = dataFunctions.get_md5_hash(virus_path[:-1]) # Create md5 from path [:-1] to remove the ":"
-                    data_json['viruses'].append({
-                        virus_name : virus_hash
-                    })
-                elif line_split[0] == "-----------":
-                    break
+        for line in log:
+            line_split = ""
+            line_split = line.split(" ")
+            if line_split[-1].strip() == "FOUND":
+                #line = [0]:PATH,[1]:NAME,[2]:FOUND\n
+                virus_name = line_split[1] # get the name of the virus from clamav log
+                virus_path = line_split[0] # get the full path of the virus clamav lof
+                virus_hash = get_md5_hash(virus_path[:-1]) # Create md5 from path [:-1] to remove the ":"
+                data_json['viruses'].append({
+                    'name' : virus_name , 'hash' : virus_hash
+                })
+            elif line_split[0] == "-----------":
+                break
     return data_json
 
 def bash_command(cmd):

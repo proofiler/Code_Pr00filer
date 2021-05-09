@@ -10,8 +10,8 @@ from .configFunctions import *
 
 # ------ Globals ------ #
 ConfigPathFile = getConfigPathFile()
-usb_path=getPathScan(ConfigPathFile)
-core_path=getPathSource(ConfigPathFile)
+pathUSB=getPathScan(ConfigPathFile)
+pathCORE=getPathSource(ConfigPathFile)
 
 def get_files(a_directory_name):
 	'''Get all files of the USB
@@ -78,7 +78,8 @@ def check_virus_total(an_hash):
 
 	return result
 def main_checkVirusTotal():
-	with open(core_path+"/logs/tmp_virustotal.log","w") as report:
-		for item in get_files(usb_path):
-			for key, value in check_virus_total(get_sha256_hash(item)).items():
-				report.write("{file} - {key} : {value}\n".format(file=item, key=key, value=value))
+	with open(pathCORE+"/logs/tmp_virustotal.log","w") as report:
+            for item in get_files(pathUSB):
+                for key, value in check_virus_total(get_sha256_hash(item)).items():
+                    report.write("{file} - {key} : {value}\n".format(file=item, key=key, value=value))
+                    print("{file} - {key} : {value}\n".format(file=item, key=key, value=value))

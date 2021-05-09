@@ -95,36 +95,34 @@ def getUUID():
     return uuid_usb
 
 def createRequest(data_json):
-
+    
     file_open = open(core_path+"/doc/hash_user.txt")
     hash_user = file_open.read().strip()
     file_open.close()
-
-    data_json['login'].append(admin_name)
-    data_json['hash'].append(hash_user) 
-        
-    json_data = json.dumps(payload)
-    print(json_data)
-    
+    data_json['login'] = admin_name
+    data_json['hash'] = hash_user 
+    json_data = json.dumps(data_json)
+    print("[DEBUG] Affichage du json final")
+    print(data_json)
     json_byte = json_data.encode("ascii")
     json_base64 = base64.b64encode(json_byte)
     json_base64 = json_base64.decode("ascii")
 
     mydata = { 'data' : json_base64 }
-    print(AddrServer)
-    print(mydata)
-    #try:
-    #r = requests.post(AddrServer, mydata)
-    #except:
-    #print("Requests.post : Error")
-
+    r = requests.post(AddrServer, mydata)
+    if r.status_code == 200:
+        # Send OK
+        print("Requête envoyé au serveur")
+    else:
+        # Send not OK
+        print("Impossible de contacter le serveur")
 
 def file_as_byte(file):
     """
     This function is used to return the content of a file as byte. Used for the MD5 hash of the file in main.py
     """
-        with file:
-                return file.read()
+    with file:
+        return file.read()
 
 def get_md5_hash(path):
     """

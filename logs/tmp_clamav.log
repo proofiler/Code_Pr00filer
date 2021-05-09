@@ -1,6 +1,6 @@
-/home/pi/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+/media/pi/WINDOWS/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
+/media/pi/WINDOWS/virus: Eicar-Signature FOUND
 
 ----------- SCAN SUMMARY -----------
-Infected files: 1
-Total errors: 1
-Time: 148.987 sec (2 m 28 s)
+Infected files: 2
+Time: 1.390 sec (0 m 1 s)

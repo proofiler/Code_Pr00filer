@@ -17,4 +17,4 @@ CHECK_VIRUSTOTAL_SCRIPT = True
 # Execute or not the Extension check : default True
 CHECK_EXTENSIONS_SCRIPT = True
 # Liste of all the extensions that are check and deleted into the USB.
-DATA_EXTENSIONS_DELETE = .ps1,.bin,.exe,.dll,.msi
+DATA_EXTENSIONS_DELETE = .ps1,.exe,.dll,.msi
