@@ -94,31 +94,18 @@ def getUUID():
     
     return uuid_usb
 
-def createRequest(JSON_list):
-
-    nbfile = JSON_list[0]
-    nbVirus = JSON_list[1]
-    time_scan = JSON_list[2]
-    uuid_usb = JSON_list[3]
-    errors_scan = JSON_list[4]
+def createRequest(data_json):
 
     file_open = open(core_path+"/doc/hash_user.txt")
     hash_user = file_open.read().strip()
     file_open.close()
-    time_float = float(time_scan)
-    time_int = int(time_float)
-    payload = {}
-    payload['login'] = admin_name
-    payload['hash'] = hash_user 
-    payload['nbFiles'] = int(nbfile)
-    payload['nbVirus'] = int(nbVirus)
-    payload['duration'] = int(time_int) 
-    payload['uuidUsb'] = uuid_usb
-    payload['nbErrors'] =  int(errors_scan)
-    
-    print(payload)
+
+    data_json['login'].append(admin_name)
+    data_json['hash'].append(hash_user) 
         
     json_data = json.dumps(payload)
+    print(json_data)
+    
     json_byte = json_data.encode("ascii")
     json_base64 = base64.b64encode(json_byte)
     json_base64 = json_base64.decode("ascii")
@@ -127,6 +114,42 @@ def createRequest(JSON_list):
     print(AddrServer)
     print(mydata)
     #try:
-    r = requests.post(AddrServer, mydata)
+    #r = requests.post(AddrServer, mydata)
     #except:
     #print("Requests.post : Error")
+
+
+def file_as_byte(file):
+    """
+    This function is used to return the content of a file as byte. Used for the MD5 hash of the file in main.py
+    """
+        with file:
+                return file.read()
+
+def get_md5_hash(path):
+    """
+    """
+    return hashlib.md5(file_as_byte(open(path, 'rb'))).hexdigest()
+
+def init_json():
+    """
+    This function init the JSON dict.
+    Return : Dictionnary
+    """
+    data_json = {}
+    data_json['login'] = ""
+    data_json['hash'] = ""
+    data_json['duration'] = 0
+    data_json['nbFiles'] = 0
+    data_json['nbVirus'] = 0
+    data_json['nbErrors'] = 0
+    data_json['uuidUsb'] = ""
+    data_json['viruses'] = []
+    return data_json
+
+def delete_file(path):
+    """
+    This function
+    """
+    bashCommand = "rm -f "+path
+    subprocess.call(bashCommand.split(), stdout=f)

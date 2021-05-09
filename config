@@ -1,8 +1,3 @@
-# PATH_* : Préciser le chemin absolue 
-# ADDR_* : Préciser une adresse IPV4 ou none s'il n'y a aucun serveur
-# FILE_* : Préciser le chemin absolue vers un fichier
-# CHECK_*: Préciser True ou False
-##################################
 # Version
 VERSION = 1.0
 # Path of the source code : default /opt/Code_Pr00filer/
@@ -23,5 +18,3 @@ CHECK_VIRUSTOTAL_SCRIPT = True
 CHECK_EXTENSIONS_SCRIPT = True
 # Liste of all the extensions that are check and deleted into the USB.
 DATA_EXTENSIONS_DELETE = .ps1,.bin,.exe,.dll,.msi
-# to do : 
-# ordre d'analyse -> check ext , clamav, virus total

@@ -78,8 +78,7 @@ def check_virus_total(an_hash):
 
 	return result
 def main_checkVirusTotal():
-	with open(core_path+"/logs/report.log","a") as report:
-		report.write("----------- VIRUS TOTAL -----------\n")
+	with open(core_path+"/logs/tmp_virustotal.log","w") as report:
 		for item in get_files(usb_path):
 			for key, value in check_virus_total(get_sha256_hash(item)).items():
 				report.write("{file} - {key} : {value}\n".format(file=item, key=key, value=value))

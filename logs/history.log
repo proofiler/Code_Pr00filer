@@ -2410,3 +2410,25 @@ Virus : None
 
 3 fichiers ont étés détectés et supprimés
 ----------- END OF REPORT -----------
+
+
+########### Rapport du 06/05/2021 22:43 ###########
+# USB
+UUID = TOTO-TOTO
+# CLAMAV
+Fichiers = 10
+Erreurs = 0
+Temps = 1.256
+Infected = 0
+/media/pi/WINDOWS/Blackenergy.bin Xls.Dropper.Blackenergy-7082085-0 
+/media/pi/WINDOWS/Blackenergy.exe Xls.Dropper.Blackenergy-7082085-0
+# VIRUSTOTAL
+Virustotal = 2
+/media/pi/WINDOWS/Blackenergy.bin - ALYac : Trojan.Dropper.X97M
+/media/pi/WINDOWS/Blackenergy.exe - ALYac : Trojan.Dropper.X97M
+# EXTENSIONS
+Extensions = 3
+/media/pi/WINDOWS/tutu.bin
+/media/pi/WINDOWS/tutu.exe
+/media/pi/WINDOWS/tutu.ps1
+########### FIN ###########

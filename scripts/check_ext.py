@@ -17,8 +17,7 @@ def main_checkExt():
     core_path=getPathSource(ConfigPathFile)
     ext = getDataExtensionsDelete(ConfigPathFile)
     a=0
-    with open(core_path+"/logs/report.log","a") as report:
-        report.write("----------- EXTENTIONS -----------\n")
+    with open(core_path+"/logs/tmp_extensions.log","w") as report:
         # On parcourt tous les fichiers contenus dans le répertoire ciblé, si un fichier contient l'extension blacklistée : il est supprimé
         for root, dirs, files in os.walk(path):
             for file in files:
@@ -32,10 +31,5 @@ def main_checkExt():
                      a = a + 1
 
         # Affichage modulable selon le nombre de fichiers détectés
-        if a==1:
-        	report.write("\n"+str(a)+" fichier a été détecté et supprimé")
-        elif a>1:
-        	report.write("\n"+str(a)+" fichiers ont étés détectés et supprimés")
-        else:
-        	report.write("\nAucun fichier avec une extension dangeureuse n'a été détecté")
+        report.write("Total_ext = "+str(a)+"\n")
 

@@ -2,6 +2,8 @@
 
 # ----- Librairies ------ #
 import random, subprocess, os
+import json, hashlib
+from datetime import date
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QTimer, QRunnable, QThreadPool, pyqtSlot, QFile, QIODevice, QTextStream, QRect 
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QLabel, QProgressBar, QWidget, QFileDialog, QPlainTextEdit)
@@ -26,8 +28,6 @@ pathCORE = configFunctions.getPathSource(ConfigPathFile)
 # Get the modules check
 VirusTotalActive = configFunctions.getCheckVirusTotalScript(ConfigPathFile)
 CheckExtensionsActive = configFunctions.getCheckExtensionsScript(ConfigPathFile)
-
-
 
 # ------ Main code ------ #
 class Worker(QRunnable):
@@ -91,51 +91,31 @@ class MainWindow(QMainWindow):
 
     def scan(self):
         self.progressBar.setValue(10)
-        self.progressBar.setValue(15)
-        # On execute le scan et on sauvegarde l'output dans lastScan.log, le fichier est crée car il n'existe pas
-        with open(pathCORE+"/logs/lastScan.log","w") as f:
-            bashCommand = "clamdscan -v -i --remove "+pathUSB
-            subprocess.call(bashCommand.split(), stdout=f)
+
+        ##### ----- CLAMAV ----- #####
+        option = "notdel"
+        check_clamav.main_clamav(option)
+        self.progressBar.setValue(20)
+        
+        # Parse virus from previous scan to json
+        data_json = check_clamav.clamav_virus_json()
+        self.progressBar.setValue(25)
+
+        option = "del"
+        check_clamav.main_clamav(option)
         self.progressBar.setValue(35)
-        with open(pathCORE+"/logs/lastScan.log") as logFile:
 
-        	#On copie les dernières lignes de lastScan.log dans report.log
-            with open(pathCORE+"/logs/report.log","w") as f:
-                bashCommand = "tail -n 10 "+pathCORE+"/logs/lastScan.log"
-                subprocess.call(bashCommand.split(), stdout=f)
-            check = "0"
-            linesLog = logFile.readlines()
-            self.progressBar.setValue(40)
-            with open (pathCORE+"/logs/report.log",'a+') as report:
-                report.write("----------- VIRUS LIST -----------\n")
-                for line in linesLog:
-                    # Si la ligne est un fichier INFECTED, on la copie dans le report.log
-                    if "FOUND" in line:
-                        report.write(line)
-                        check="1"
-                if check == "0":
-                    report.write("Virus : None\n")
-                self.progressBar.setValue(50)
-            # Execute checkVirusTotal script
-            checkVirusTotal.main_checkVirusTotal()
-            self.progressBar.setValue(70)
+        ##### ----- VIRUSTOTAL ----- #####
+        checkVirusTotal.main_checkVirusTotal()
+        self.progressBar.setValue(70)
 
-            # Execution check_ext script
-            check_ext.main_checkExt()
-            self.progressBar.setValue(80)
-            # Execution script check Rubber et extentions
-            with open (pathCORE+"/logs/report.log",'a+') as report:
-                report.write("\n----------- END OF REPORT -----------\n")
-
-            with open(pathCORE+"/logs/history.log","a") as f:
-                bashCommand = "cat "+pathCORE+"/logs/report.log"
-                subprocess.call(bashCommand.split(), stdout=f)
-
-            self.progressBar.setValue(100)
+        ##### ----- EXTENSIONS ----- #####
+        check_ext.main_checkExt()  
+        self.progressBar.setValue(100)
             
     ## Affichage deuxième fenêtre pour le report.log
-            self.dialog = Second(self)
-            self.dialog.show()
+        self.dialog = Second(self)
+        self.dialog.show()
 
     def executeScan(self):
         worker = Worker(self.scan)
@@ -180,8 +160,8 @@ class Second(QMainWindow):
         self.Display()
         
         # Suppression report.log et lastScan.log pour les prochains scans
-        os.remove(pathCORE+"/logs/lastScan.log")
-        os.remove(pathCORE+"/logs/report.log")
+        #os.remove(pathCORE+"/logs/lastScan.log")
+        #os.remove(pathCORE+"/logs/report.log")
             
         # Umount USB
        #bashCommand = "sudo umount /media/pi/*"
@@ -190,95 +170,152 @@ class Second(QMainWindow):
 
     # Fonction qui permet d'afficher le rapport final
     def Display(self):
-        with open(pathCORE+"/logs/report.log",'r') as report:
-            # Initialisationd es variables
-            VirusList = 0
-            VirusTotal= 0
-            Extensions= 0
-            VirusLine = ""
-            VirusTotalLine = ""
-            ExtensionsLine = ""
-            errors_count = "0"
-            JSON_list = [] # nombre de fichiers ; nombre de virus ; temps du scan
-            # Parcours du fichier report.log
-            for line in report:
-                
-                # Récupère le nombre de fichiers
-                nb_files = dataFunctions.getNumberOfFiles(pathUSB)
-                self.nbfile.setText("Fichiers Analysés : "+str(nb_files))
-                self.nbfile.adjustSize()
+        with open(pathCORE+"/logs/history.log","a") as report:
+            nbErrors=0
+            now = datetime.now()
+            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            VirusLine = "Liste des virus :\n"
+            ExtensionsLine = "Liste des extenions supprimées :\n"
+            datareport_array = []
+            ## Info VirusTotal
+            with open(pathCORE+"/logs/tmp_virustotal.log","r") as virustotal:
+                line_split = ""
+                count_vt = 0 # store the number of virus with VT
+                for line in virustotal:
+                    try:
+                    # Récup nom du virus + hashline_split = line.split()
+                    # line = [0]:PATH, [1]:'-', [2]:SOURCE, [3]:':', [4]:NAME
+                        virus_name = line_split[4].strip() 
+                        virus_path = line_split[0]
+                        virus_hash = dataFunctions.get_md5_hash(virus_path)
+                        print("[!] VT : "+str(count_vt)+" "+virus_name+" "+virus_path+" "+virus_hash)
+                        # On ajoute le virus dans le JSON
+                        data_json['viruses'].append({
+                                virus_name : virus_hash
+                        })
 
-                if "Infected" in line: # Récupère le nombre de Virus
-                    virusnb_split = line.split(" ")
-                    virusnb = virusnb_split[2]
-                    self.virus.setText("Nombre de Virus : "+virusnb)
-                    self.virus.adjustSize()
-                    virusnb = virusnb.rstrip("\n")
-                    #Check virus et modification de l'image en conséquence
-                    if int(virusnb) != 0:
+                        count_vt = count_vt + 1
+                        VirusLine = VirusLine+"-- "+str(count_vt)+" : "+virus_path+" "+virus_name+"\n"
+                        datareport_array.append("[VT] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
+                        
+                        # On supprime le fichier trigger par VT
+                        dataFunctions.delete_file(virus_path)
+                        print("[VT] "+virus_path+" supprimé !")
+                    except:
+                        print("Aucun résultat VT")
+
+            ## Info Extensions
+            with open(pathCORE+"/logs/tmp_extensions.log","r") as extensions:
+                line_split = ""
+                nbExt = 0
+                for line in extensions:
+                    if "Total_ext" in line:
+                        line_split = line.split(" ")
+                        nbExt_str = line_split[2].strip()
+                        nbExt = int(nbExt_str)
+
+                if nbExt == 0:
+                    # Aucunes Extensions supprimées
+                        ExtensionsLine = ExtensionsLine+"Aucune extenions supprimées\n"
+                else:
+                    line_split = ""
+                    for line in extensions:
+                        line_split = line.split(" ")
+                        if line_split[0] == "Total_ext":
+                            pass 
+                        else:
+                            Ext_path = line_split[0].strip()
+                            ExtensionsLine = ExtensionsLine+"-- "+Ext_path+"\n"
+                            datareport_array.append("[EX] "+Ext_path+"\n")
+
+                    # Tu affiche les données avec setText oklm
+                    # une fois que c'est ok bah tu fais le fichier history.log pour que ce soit tout beau
+                    # bisous
+                
+            ## Info clamav
+            with open(pathCORE+"/logs/tmp_clamav.log","r") as clamav:
+                # fichier
+                nb_files = dataFunctions.getNumberOfFiles(pathUSB)
+
+                counter = 0 + count_vt # If there are virus into VT scan, we add them to the clamav counter viruses
+
+                # Temps du scan
+                for line in clamav:
+                    line_split = ""
+                    if "Time:" in line:
+                        line_split = line.split(" ")
+                        time_scan = line_split[1].strip()
+                        time_float = float(time_scan)
+                        duration = int(time_float)
+                        duration = duration + duration + 3
+                # Nombre de virus    
+                    if "Infected" in line:
+                        line_split = line.split(" ")
+                        nbVirus = line_split[-1].strip()
+                        nbVirus = int(nbVirus)+count
+                # Récupération des virus
+                    if "FOUND" in line:
+                        line_split = line.split(" ")
+                        counter = counter + 1
+                        # display exemple
+                        # -- 2 : /path/virus NAME
+                        virus_name = line_split[1] 
+                        virus_path = line_split[0]
+                        virus_hash = dataFunctions.get_md5_hash(virus_path)
+                        VirusLine = VirusLine+"-- "+str(counter)+" : "+virus_path+" "+virus_name+"\n"
+                        datareport_array.append("[AV] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
+                # Nombre d'erreurs
+                    if "errors:" in line:
+                        line_split = line.split(" ")
+                        nbErrors_str = line_split[-1].strip()
+                        nbErrors = int(nbErrors_str)
+                # Affichage des images Warning et OK pour l'état de la clé
+                if int(virusnb) != 0:
                         self.warning.setPixmap(QPixmap(pathCORE+"/assets/warning.png"))
                     else:
                         self.warning.setPixmap(QPixmap(pathCORE+"/assets/ok.png"))
-
-                if "Total errors:" in line: # Récupère les erreurs et affiche un message
-                    errors_line = line.split()
-                    errors_count = errors_line[2]
-                    self.errors.setText("Une erreur est survenue pendant l'analyse antivirale !")
+                
+                # On set les valeur des champs TEXT
+                self.nbfile.setText("Fichiers : "+str(nb_files))
+                self.nbfile.adjustSize()
+                self.time.setText("Temps : "+str(duration)+" secondes")
+                self.time.adjustSize()
+                self.virus.setText("Virus : "+str(nbvirus))
+                self.virus.adjustSize()
+                if nbErrors != 0:
+                    self.errors.setText("Une erreur est survenue pendant l'analyse !")
                     self.errors.adjustSize()
+                self.viruslist.setText(VirusLine)
+                self.viruslist.adjustSize()
+                self.virustotal.setText(VirusTotalLine)
+                self.virustotal.adjustSize()
+                self.extensions.setText(ExtensionsLine)
+                self.extensions.adjustSize()
+                
+            # GENERER LE REPORT
+            report.write("########### Rapport du "+dt_string+" ###########\n")
+            report.write("# USB\n")
+            report.write("UUID = "+dataFunctions.getUUID()+"\n")  
+            report.write("# CLAMAV")
+            report.write("Fichiers = "+str(nbFiles))
+            report.write("Erreurs = "+str(nbErrors))
+            report.write("Temps = "+str(duration))
+            report.write("Ingected = "+str(nbVirus))
+            report.write("VirusTotal = "str(count_vt))
+            report.write("Extensions = "+str(nbExt))
+            for line in datareport_array:
+                report.write(line)
+            report.write("########### FIN ###########")
 
-                if "Time:" in line: # Récupère le temps du scan
-                    time_split = line.split(" ")
-                    time_scan = time_split[1]
-                    self.time.setText("Temps du Scan : "+time_scan+" secondes")
-                    self.time.adjustSize() 
-                # SI on arrive à END OD REPORT, c'est la fin
-                # Du coup on setText les QLabels
-                if "END OF" in line:
-                    Extension = 0
-                    
-                    self.viruslist.setText(VirusLine)
-                    self.viruslist.adjustSize()
-                    
-                    self.virustotal.setText(VirusTotalLine)
-                    self.virustotal.adjustSize()
-
-                    self.extensions.setText(ExtensionsLine)
-                    self.extensions.adjustSize()
-                # SI on arrive à la ligne EXTENSION on parcours les extensions
-                # Et on mes les lignes dans ExtensionsLine
-                # On passe VirusTotal à 0 pour ne par repasser dans le if VIRUS TOTAL
-                if "EXTENSIONS" in line:
-                    VirusTotal = 0
-                    Extensions = 1
-                # Extensions est à 1, on parcours les extensions est on les ajoute dans notre variable
-                if Extensions == 1:
-                    ExtensionsLine += line+"\n"                    
-                # SI on est dans la ligne VIRUS TOTAL on parcours les lignes de VirusTotal
-                # On passe VIrusList à 0 pour ne par repasser dans le if
-                if "VIRUS TOTAL" in line:
-                    VirusList = 0
-                    VirusTotal = 1
-                # On parcours les ligne VirusTotal et on les ajoute dans notre Variable
-                if VirusTotal == 1:
-                    VirusTotalLine += line+"\n"
-                # SI on arrive dans la ligne VIRUS LIST on parcours la liste des VIRUS
-                if "VIRUS LIST" in line:
-                    VirusList = 1
-                # ON parcours les virus et on les ajoute dans notre variable
-                if VirusList == 1:
-                    VirusLine += line+'\n'
-        # Ajout des info dans JSON_list
-        JSON_list.append(nb_files)
-        JSON_list.append(virusnb)
-        JSON_list.append(time_scan)
-        JSON_list.append(dataFunctions.getUUID())
-        JSON_list.append(errors_count)
-        # On envoie la request POST au serveur
-        dataFunctions.createRequest(JSON_list)
-
-
-
-        
+            # Ajout des info dans JSON_list
+            data_json['nbFiles'] = nb_files
+            data_json['nbVirus'] = virusnb
+            data_json['duration'] = duration
+            data_json['uuidUsb'] = dataFunctions.getUUID()
+            data_json['nbErrors'] = errors_count
+            # On envoie la request POST au serveur
+            print(data_json)
+            dataFunctions.createRequest(data_json)
 
 if __name__ == '__main__':
     import sys
