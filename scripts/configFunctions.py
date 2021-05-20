@@ -94,6 +94,34 @@ def getFileAdminHash(ConfigPathFile):
                 FileAdminHash = line_split[2]
     return FileAdminHash
 
+def getFileConfigHash(ConfigPathFile):
+    """
+    return the path where is stored the hash used to received data from the server : string
+    """
+    FileConfigHash = "doc/hash_config.txt"
+    line = ""
+    line_split = ""
+    with open(ConfigPathFile) as conf:
+        for line in conf:
+            line_split = line.split()
+            if line_split[0] == "FILE_CONFIG_HASH":
+                FileConfigHash = line_split[2]
+    return FileConfigHash
+
+def getFileVirusHash(ConfigPathFile):
+    """
+    return the path where is stored the hash of the virus : string
+    """
+    FileVirusHash = "doc/hash_virus.txt"
+    line = ""
+    line_split = ""
+    with open(ConfigPathFile) as conf:
+        for line in conf:
+            line_split = line.split()
+            if line_split[0] == "FILE_VIRUS_HASH":
+                FileVirusHash = line_split[2]
+    return FileVirusHash
+
 def getCheckVirusTotalScript(ConfigPathFile):
     """
     return the value True or False for CheckVirusTotal Script : Boolean

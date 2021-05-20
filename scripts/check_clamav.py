@@ -37,7 +37,7 @@ def clamav_virus_json():
                 #line = [0]:PATH,[1]:NAME,[2]:FOUND\n
                 virus_name = line_split[1] # get the name of the virus from clamav log
                 virus_path = line_split[0] # get the full path of the virus clamav lof
-                virus_hash = get_md5_hash(virus_path[:-1]) # Create md5 from path [:-1] to remove the ":"
+                virus_hash = get_sha256_hash(virus_path[:-1]) # Create sha256 from path [:-1] to remove the ":"
                 data_json['viruses'].append({
                     'name' : virus_name , 'hash' : virus_hash
                 })

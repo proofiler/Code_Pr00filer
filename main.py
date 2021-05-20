@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
         # Parse virus from previous scan to json
         data_json = check_clamav.clamav_virus_json()
         self.progressBar.setValue(25)
-        option = "notdel"
+        option = "del"
         check_clamav.main_clamav(option)
         self.progressBar.setValue(35)
         print(data_json) 
@@ -181,8 +181,7 @@ class Second(QMainWindow):
 
         with open(pathCORE+"/logs/history.log","a") as report:
             nbErrors=0
-            now = datetime.date.today()
-            dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+            dt_string = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             VirusLine = "Liste des virus :\n"
             ExtensionsLine = "Liste des extenions supprimées :\n"
             datareport_array = []
@@ -190,21 +189,20 @@ class Second(QMainWindow):
             ## Info VirusTotal
             with open(pathCORE+"/logs/tmp_virustotal.log","r") as virustotal:
                 line_split = ""
-                
                 count_vt = 0 # store the number of virus with VT
-                if virustotal.read() != "":
-                    for line in virustotal:
-                        # Récup nom du virus + hashline_split = line.split()
-                        # line = [0]:PATH, [1]:'-', [2]:SOURCE, [3]:':', [4]:NAME
+                for line in virustotal:
+                    # Récup nom du virus + hashline_split = line.split()
+                    # line = [0]:PATH, [1]:'-', [2]:SOURCE, [3]:':', [4]:NAME
+                    if line[0] != "":
+                        line_split = line.split(" ")
                         virus_name = line_split[4].strip() 
                         virus_path = line_split[0]
-                        virus_hash = dataFunctions.get_md5_hash(virus_path)
+                        virus_hash = dataFunctions.get_sha256_hash(virus_path)
                         print("[!] VT : "+str(count_vt)+" "+virus_name+" "+virus_path+" "+virus_hash)
                         # On ajoute le virus dans le JSON
                         data_json['viruses'].append({
                             'name':virus_name ,'hash':virus_hash
                         })
-
                         count_vt = count_vt + 1
                         VirusLine = VirusLine+"-- "+str(count_vt)+" : "+virus_path+" "+virus_name+"\n"
                         datareport_array.append("[VT] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
@@ -212,8 +210,8 @@ class Second(QMainWindow):
                         # On supprime le fichier trigger par VT
                         dataFunctions.delete_file(virus_path)
                         print("[VT] "+virus_path+" supprimé !")
-                else:
-                    print("Aucun résultat VT")
+                    else:
+                        print("Ligne vide")
                 print("Count_vt ="+str(count_vt))
             ## Info Extensions
             with open(pathCORE+"/logs/tmp_extensions.log","r") as extensions:
@@ -230,16 +228,12 @@ class Second(QMainWindow):
                     # Aucunes Extensions supprimées
                         ExtensionsLine = ExtensionsLine+"Aucune extenions supprimées\n"
                 else:
-                    print("Esle ext != 0")
                     line_split = ""
                     for lines in extensions:
-                        print(lines)
                         line_split = lines.split(" ")
                         if line_split[0] == "Total_ext":
-                            print("Pass Total_ext")
                             pass 
                         else:
-                            print("Dans else")
                             Ext_path = line_split[0].strip()
                             ExtensionsLine = ExtensionsLine+"-- "+Ext_path+"\n"
                             datareport_array.append("[EX] "+Ext_path+"\n")
@@ -274,7 +268,7 @@ class Second(QMainWindow):
                         virus_name = line_split[1] 
                         virus_path = line_split[0]
                         #parcourir json au lieu du raport pour récupérer les info clamav
-                        #virus_hash = dataFunctions.get_md5_hash(virus_path)
+                        #virus_hash = dataFunctions.get_sha256_hash(virus_path)
                         VirusLine = VirusLine+"-- "+str(counter)+" : "+virus_path+" "+virus_name+"\n"
                         datareport_array.append("[AV] "+virus_path+" "+virus_name+"\n")
                 # Nombre d'erreurs
@@ -318,7 +312,6 @@ class Second(QMainWindow):
             report.write("Extensions = "+str(nbExt)+"\n")
             for line in datareport_array:
                 report.write(line)
-            report.write("########### FIN ###########\n")
 
             # Ajout des info dans JSON_list
             data_json['nbFiles'] = int(nbFiles)

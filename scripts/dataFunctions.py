@@ -112,10 +112,14 @@ def createRequest(data_json):
     r = requests.post(AddrServer, mydata)
     if r.status_code == 200:
         # Send OK
-        print("Requête envoyé au serveur")
+        with open(core_path+"/logs/history.log",'a') as report:
+            report.write("[+] Rapport envoyé au serveur\n")
+            report.write("########### FIN ###########\n\n")
     else:
         # Send not OK
-        print("Impossible de contacter le serveur")
+        with open(core_path+"logs/history.log",'a') as report:
+            report.write("[!] Impossible de contacter le serveur\n")
+            report.write("########### FIN ###########\n\n")
 
 def file_as_byte(file):
     """
@@ -124,10 +128,10 @@ def file_as_byte(file):
     with file:
         return file.read()
 
-def get_md5_hash(path):
+def get_sha256_hash(path):
     """
     """
-    return hashlib.md5(file_as_byte(open(path, 'rb'))).hexdigest()
+    return hashlib.sha256(file_as_byte(open(path, 'rb'))).hexdigest()
 
 def init_json():
     """
@@ -150,4 +154,4 @@ def delete_file(path):
     This function
     """
     bashCommand = "rm -f "+path
-    subprocess.call(bashCommand.split(), stdout=f)
+    subprocess.call(bashCommand.split())
