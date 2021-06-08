@@ -1,9 +1,4 @@
-/media/pi/WINDOWS/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0 FOUND
-traverse_to: Handle opened for 'media' directory.
-traverse_to: Handle opened for 'pi' directory.
-traverse_to: Handle opened for 'WINDOWS' directory.
-/media/pi/WINDOWS/Blackenergy.bin: Removed.
 
 ----------- SCAN SUMMARY -----------
-Infected files: 1
-Time: 1.670 sec (0 m 1 s)
+Infected files: 0
+Time: 0.001 sec (0 m 0 s)

@@ -7,6 +7,12 @@ import requests
 import subprocess
 import json
 import base64
+
+# ------ Crypto ------ #
+import binascii
+from Crypto.Cipher import AES
+from Crypto import Random
+# ------ Scripts ------ #
 from .configFunctions import *
 
 # ------ Globals ------ #
@@ -16,6 +22,31 @@ core_path=getPathSource(ConfigPathFile)
 hash_path=getFileAdminHash(ConfigPathFile)
 admin_name=getNameAdmin(ConfigPathFile)
 AddrServer = getAddrServer(ConfigPathFile)
+
+
+def my_encrypt(data, passphrase):
+    """
+         Encrypt using AES-256-CBC with random/shared iv
+        'passphrase' must be in hex, generate with 'openssl rand -hex 32'
+    """
+    try:
+        key = binascii.unhexlify(passphrase)
+        pad = lambda s : s+chr(16-len(s)%16)*(16-len(s)%16)
+        iv = Random.get_random_bytes(16)
+        cipher = AES.new(key, AES.MODE_CBC, iv)
+        encrypted_64 = base64.b64encode(cipher.encrypt(pad(data))).decode('ascii')
+        iv_64 = base64.b64encode(iv).decode('ascii')
+        json_data = {}
+        json_data['iv'] = iv_64
+        json_data['data'] = encrypted_64
+        clean = base64.b64encode(json.dumps(json_data).encode('ascii'))
+    except Exception as e:
+        print("Cannot encrypt datas...")
+        print(e)
+        exit(1)
+    return clean
+
+
 
 def bash_cmd(cmd):
     """
@@ -102,24 +133,33 @@ def createRequest(data_json):
     data_json['login'] = admin_name
     data_json['hash'] = hash_user 
     json_data = json.dumps(data_json)
-    print("[DEBUG] Affichage du json final")
     print(data_json)
+
+    # JSON to BASE64
     json_byte = json_data.encode("ascii")
     json_base64 = base64.b64encode(json_byte)
     json_base64 = json_base64.decode("ascii")
+    print(json_base64)
 
-    mydata = { 'data' : json_base64 }
+    # Encrypt JSON
+    encrypted = my_encrypt(json_base64,"5cd10f8a394a241beae003415a1b4569672696468c5aec18f880d1eb2043ad0c")
+    print(encrypted)
+
+    # Create POST
+    mydata = { 'data' : encrypted }
     r = requests.post(AddrServer, mydata)
     if r.status_code == 200:
         # Send OK
         with open(core_path+"/logs/history.log",'a') as report:
             report.write("[+] Rapport envoyé au serveur\n")
-            report.write("########### FIN ###########\n\n")
     else:
         # Send not OK
         with open(core_path+"logs/history.log",'a') as report:
             report.write("[!] Impossible de contacter le serveur\n")
-            report.write("########### FIN ###########\n\n")
+
+    with open(core_path+"/logs/history.log",'a') as report:
+        report.write("########### FIN ############ \n")
+    print(r.text)
 
 def file_as_byte(file):
     """

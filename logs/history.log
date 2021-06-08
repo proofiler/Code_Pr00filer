@@ -3163,3 +3163,420 @@ ADDR_SERVER : http://129.0.0.1/Web_Pr00filer/data
 DATA_EXTENSIONS_DELETE : .exe,.ps1,.bin,.toto
 [!] Virus Hash List Updated
 ########### Config Update END ###########
+########### Rapport du 25/05/2021 14:34:35 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+########### Rapport du 25/05/2021 14:35:43 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+########### Rapport du 25/05/2021 14:36:27 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+########### Rapport du 25/05/2021 14:38:25 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+########### Rapport du 25/05/2021 14:38:58 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+########### Rapport du 25/05/2021 14:40:22 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 14:42:52 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 14:45:02 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 14:46:39 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 14:53:40 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 14:54:11 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 15:04:30 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 15:05:35 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+[+] Rapport envoyé au serveur
+########### FIN 
+########### Rapport du 25/05/2021 15:08:50 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ########### 
+
+########### Rapport du 25/05/2021 15:11:41 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:19:26 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:23:05 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:27:35 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:29:19 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:45:10 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:46:43 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 15:57:59 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:00:38 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:06:01 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 1
+Temps = 3
+Ingected = 1
+VirusTotal = 1
+Extensions = 0
+[VT] /media/pi/WINDOWS/virus eicar 131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:08:20 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 1
+Temps = 3
+Ingected = 1
+VirusTotal = 1
+Extensions = 0
+[VT] /media/pi/WINDOWS/virus eicar 131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:10:29 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:11:29 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:12:02 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:12:39 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:12:51 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:14:06 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:15:00 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 1
+VirusTotal = 0
+Extensions = 0
+[AV] /media/pi/WINDOWS/virus: Eicar-Signature
+[+] Rapport envoyé au serveur
+########### FIN ############ 
+########### Rapport du 25/05/2021 16:15:15 ###########
+# USB
+UUID = D82E-39A1
+# CLAMAV
+Fichiers = 1
+Erreurs = 0
+Temps = 3
+Ingected = 0
+VirusTotal = 0
+Extensions = 0
+########### Config Update : 25/05/2021 16:33:45 ##########
+From : 86.238.91.4
+ADDR_SERVER : http://192.168.1.28/Proofiler_web/data
+DATA_EXTENSIONS_DELETE : .pdf,.png,.txt
+[!] Virus Hash List Updated
+########### Config Update END ###########

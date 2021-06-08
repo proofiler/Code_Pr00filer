@@ -9,6 +9,9 @@ from io import BytesIO
 ## --- Scripts --- ##
 from scripts import *
 
+import binascii
+from Crypto.Cipher import *
+
 ## --- Globals -- ##
 
 # Path of the configFile
@@ -19,6 +22,29 @@ pathCORE = configFunctions.getPathSource(ConfigPathFile)
 pathVirusFile = configFunctions.getFileVirusHash(ConfigPathFile)
 #Path of the config hash file
 pathConfigHashFile = configFunctions.getFileConfigHash(ConfigPathFile)
+
+
+def my_decrypt(data, passphrase):
+    """
+         Decrypt using AES-256-CBC with iv
+        'passphrase' must be in hex, generate with 'openssl rand -hex 32'
+        # https://stackoverflow.com/a/54166852/11061370
+    """
+    try:
+        unpad = lambda s : s[:-s[-1]]
+        key = binascii.unhexlify(passphrase)
+        encrypted = json.loads(base64.b64decode(data).decode('ascii'))
+        encrypted_data = base64.b64decode(encrypted['data'])
+        iv = base64.b64decode(encrypted['iv'])
+        cipher = AES.new(key, AES.MODE_CBC, iv)
+        decrypted = cipher.decrypt(encrypted_data)
+        clean = unpad(decrypted).decode('ascii').rstrip()
+    except Exception as e:
+        print("Cannot decrypt datas...")
+        print(e)
+        clean = "F"
+    return clean
+
 
 def get_ip_address():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -48,11 +74,15 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             
             # Récupération du base64 en retirant 'data=' au début
             data_64 = data_raw[5:]
+            
+            # Dechiffrement du message
+            decrypt = my_decrypt(data_64,"5cd10f8a394a241beae003415a1b4569672696468c5aec18f880d1eb2043ad0c")
+
             # Décodage du base64, try except car si c'est pas du b64 il y aura une erreur
-            data_decode = base64.b64decode(data_64)
-            data_decode = data_decode.decode()
+            #data_decode = base64.b64decode(decrypt)
+            #data_decode = data_decode.decode()
             # Forge au format JSON
-            data_json = json.loads(data_decode)
+            data_json = json.loads(decrypt)
             # Récupère le hash et check si correcpond au hash dans le fichier
             hash_check = data_json['hash']
 
@@ -62,7 +92,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             if hash_check.rstrip() == hash_origin.rstrip():
                 ## --- ADDR_SERVER
                 new_server = data_json['ip']
-                true_server = "http://"+new_server+"/Web_Pr00filer/data"
+                true_server = "http://"+new_server+"/Proofiler_web/data"
                 bashCommand = "sed -i '/ADDR_SERVER /c\ADDR_SERVER = "+true_server+"'"+" "+ConfigPathFile
                 os.system(bashCommand)
                
