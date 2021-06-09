@@ -139,27 +139,39 @@ def createRequest(data_json):
     json_byte = json_data.encode("ascii")
     json_base64 = base64.b64encode(json_byte)
     json_base64 = json_base64.decode("ascii")
-    print(json_base64)
+    #print(json_base64)
 
     # Encrypt JSON
     encrypted = my_encrypt(json_base64,"5cd10f8a394a241beae003415a1b4569672696468c5aec18f880d1eb2043ad0c")
-    print(encrypted)
+    #print(encrypted)
 
     # Create POST
     mydata = { 'data' : encrypted }
-    r = requests.post(AddrServer, mydata)
-    if r.status_code == 200:
+    try:
+        r = requests.post(AddrServer, mydata)    
+        if r.status_code == 200:
         # Send OK
-        with open(core_path+"/logs/history.log",'a') as report:
-            report.write("[+] Rapport envoyé au serveur\n")
-    else:
+            with open(core_path+"/logs/history.log",'a') as report:
+                report.write("[+] Rapport envoyé au serveur\n")
+        else:
         # Send not OK
+            with open(core_path+"logs/history.log",'a') as report:
+                report.write("[!] Impossible de contacter le serveur - Not 200\n")
+    except requests.exceptions.Timeout:
         with open(core_path+"logs/history.log",'a') as report:
-            report.write("[!] Impossible de contacter le serveur\n")
+            report.write("[!] Impossible de contacter le serveur - Timeout\n")
+    except requests.exceptions.HTTPError:
+        with open(core_path+"logs/history.log",'a') as report:
+            report.write("[!] Impossible de contacter le serveur - HTTPError\n")
+    except requests.exceptions.RequestException:
+        with open(core_path+"logs/history.log",'a') as report:
+            report.write("[!] Impossible de contacter le serveur - RequestException\n")
+    except requests.exceptions.ConnectionError :
+        with open(core_path+"logs/history.log",'a') as report:
+            report.write("[!] Impossible de contacter le serveur - ConnectionError\n")
 
     with open(core_path+"/logs/history.log",'a') as report:
         report.write("########### FIN ############ \n")
-    print(r.text)
 
 def file_as_byte(file):
     """
@@ -195,3 +207,17 @@ def delete_file(path):
     """
     bashCommand = "rm -f "+path
     subprocess.call(bashCommand.split())
+
+def check_hash(pathHashFile, hash):
+    """
+    Check if the hash is in the hashfile
+    Return True if the hash is in the file
+    Return False if not.
+    """
+    with open(core_path+pathHashFile) as f:
+        all_file = f.read()
+        if hash in all_file:
+            return True
+        else:
+            return False
+            

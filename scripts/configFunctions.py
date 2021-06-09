@@ -173,3 +173,4 @@ def getDataExtensionsDelete(ConfigPathFile):
                 Temp_split = line_split[2]
                 DataExtensionsDelete = Temp_split.split(",")
     return DataExtensionsDelete
+

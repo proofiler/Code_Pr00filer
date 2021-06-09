@@ -93,29 +93,17 @@ class MainWindow(QMainWindow):
 
     def scan(self):
         self.progressBar.setValue(10)
-        # LEs extensions sont d'abord supprimées
-        # Ensuite les hash des fichiers qui sont dans notre hash_virus lists sont supprimés aussi
-        # Ensuite un scan CLAMAV
-        # Ensuite un scan VT
-        # Et pour finir, un scan YARA
 
-        ##### ----- EXTENSIONS ----- #####
-        print("Check EXTENSIONS")
-        check_ext.main_checkExt()  
-        self.progressBar.setValue(20)
-
-        ##### ----- Check HASH ----- #####
-        check_hash.main_checkHash()
-
-        print("CHECK CLAMAV")
         ##### ----- CLAMAV ----- #####
         option = "notdel"
         check_clamav.main_clamav(option)
-        self.progressBar.setValue(40)
+        self.progressBar.setValue(20)
         # Parse virus from previous scan to json
         data_json = check_clamav.clamav_virus_json()
+        self.progressBar.setValue(25)
         option = "del"
         check_clamav.main_clamav(option)
+        self.progressBar.setValue(35)
         print(data_json) 
         # On sauvegarde le JSON pour le récupérer dans les autres fonctions de l'application
         with open(pathCORE+"/logs/data_json.json",'w') as outfile:
@@ -125,8 +113,9 @@ class MainWindow(QMainWindow):
         checkVirusTotal.main_checkVirusTotal()
         self.progressBar.setValue(70)
 
-        ##### ----- YARA ----- #####
-        
+        ##### ----- EXTENSIONS ----- #####
+        check_ext.main_checkExt()  
+        self.progressBar.setValue(100)
             
     ## Affichage deuxième fenêtre pour le report.log
         self.dialog = Second(self)
@@ -190,9 +179,6 @@ class Second(QMainWindow):
         with open(pathCORE+"/logs/data_json.json","r") as json_file:
             data_json = json.load(json_file)
 
-
-
-        # Ouverture du log history
         with open(pathCORE+"/logs/history.log","a") as report:
             nbErrors=0
             dt_string = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
@@ -200,24 +186,6 @@ class Second(QMainWindow):
             ExtensionsLine = "Liste des extenions supprimées :\n"
             datareport_array = []
 
-            ## INFO check_HASH
-            # On ouvre le JSON qui contient les virus toruvé dans le module check_hash
-            with open(pathCORE+"/logs/tmp_virus.json","r") as json_virus_file:
-                virus_json = json.load(json_virus_file)
-            #On ajoute les virus trouvé avec le module check_hash dans notre data_json final
-            coutn_hash_virus = 0
-            if not 'virus' in virus_json and len(virus_json['virus']) == 0:
-                pass
-            else:
-                for virus in virus_json['virus']:
-                    coutn_hash_virus = coutn_hash_virus +1
-                    virus_name = virus['name']
-                    virus_path = virus['path']
-                    virus_hash = virus['hash']
-                    data_json['viruses'].append({'name':virus_name ,'hash':virus_hash})
-                    # On ajoute les virus trouvé dans le check_hash dans l'array qui va etre ajouté au rapport final
-                    datareport_array.append("[HC] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
-            
             ## Info VirusTotal
             with open(pathCORE+"/logs/tmp_virustotal.log","r") as virustotal:
                 line_split = ""
@@ -275,7 +243,7 @@ class Second(QMainWindow):
                 # fichier
                 nbFiles = dataFunctions.getNumberOfFiles(pathUSB)
 
-                counter = 0 + count_vt + coutn_hash_virus# If there are virus into VT scan, we add them to the clamav counter viruses
+                counter = 0 + count_vt # If there are virus into VT scan, we add them to the clamav counter viruses
                 print("Counter AV = "+str(counter))
                 # Temps du scan
                 for line in clamav:
