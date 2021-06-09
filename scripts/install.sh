@@ -44,6 +44,13 @@ sudo cp /opt/Code_Pr00filer/doc/11-insert.rules /etc/udev/rules.d/11-insert.rule
 sudo cp /opt/Code_Pr00filer/doc/11-remove.rules /etc/udev/rules.d/11-remove.rules
 sudo udevadm control --reload
 
+# Creation du service autostart du serveur python
+echo "[+] Création autostart serveur python"
+sudo cp /opt/Code_Pr00filer/doc/serverProofiler.service /etc/systemd/system/serverProofiler.service
+sudo systemctl enable serverProofiler.service
+sudo systemctl daemon-reload
+sudo systemctl start serverProofiler.service
+
 # Création du SERVICE insertUSB
 echo "[+] Creation du SERVICE insertUSB"
 sudo cp /opt/Code_Pr00filer/doc/insertUSB.service /etc/systemd/system/insertUSB.service

@@ -1,0 +1,14 @@
+
+[Unit]
+Description=Serveur Proofiler Raspberry
+After=network.target network-online.target
+
+[Service]
+Type=oneshot
+#DirtyFix
+ExecStartPre=/bin/sleep 30
+ExecStart=/usr/bin/python3 /opt/Code_Pr00filer/server.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

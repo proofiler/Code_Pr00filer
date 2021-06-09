@@ -6,7 +6,7 @@ import json, hashlib
 import datetime
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QTimer, QRunnable, QThreadPool, pyqtSlot, QFile, QIODevice, QTextStream, QRect 
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QLabel, QProgressBar, QWidget, QFileDialog, QPlainTextEdit)
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QLabel, QProgressBar, QWidget, QFileDialog, QPlainTextEdit, QDesktopWidget)
 # ----- Scripts ------ #
 from scripts import *
 
@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
 
         self.id = 0
         self.picturesDirectory = pathCORE+"/pictures/"
-        self.images = ["picture1.png", "picture2.png", "picture3.png"]
+        self.images = ["picture1.png", "picture2.png"]
 
         self.image = QLabel(self)
 
@@ -72,12 +72,22 @@ class MainWindow(QMainWindow):
         timerPicturesSlide.timeout.connect(self.updatePicturesSlide)
         timerPicturesSlide.start(5000)
 
+    def location_on_the_screen(self):
+        qtRectangle = self.frameGeometry() 
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+        self.move(qtRectangle.topLeft())
+    
     def updatePicturesSlide(self):
         if self.id < len(self.images):
-            self.image.setPixmap(QPixmap(self.picturesDirectory + self.images[self.id]))
+            pixmap = QPixmap(self.picturesDirectory + self.images[self.id])
+            pixmap2 = pixmap.scaled(800,550)
+            self.image.setPixmap(pixmap2)
         else:
             self.id = 0
-            self.image.setPixmap(QPixmap(self.picturesDirectory + self.images[self.id]))
+            pixmap = QPixmap(self.picturesDirectory + self.images[self.id])
+            pixmap2 = pixmap.scaled(800,550)
+            self.image.setPixmap(pixmap2)
 
         self.id = self.id + 1
 
@@ -154,20 +164,20 @@ class Second(QMainWindow):
         self.errors.move(10,45)
 
         # Label Nombre de fichiers analysés
-        self.nbfile =  QLabel(self)
-        self.nbfile.move(10,55)
+        #self.nbfile =  QLabel(self)
+        #self.nbfile.move(10,55)
 
         # Label pour afficher la liste des Virus
-        self.viruslist = QLabel(self)
-        self.viruslist.move(10,65)
+        #self.viruslist = QLabel(self)
+        #self.viruslist.move(10,65)
        
         # Label pour afficher la liste VIRUS TOTAL
-        self.virustotal = QLabel(self)
-        self.virustotal.move(10,100)
+        #self.virustotal = QLabel(self)
+        #self.virustotal.move(10,100)
 
         # Label pour afficher la liste des EXTENSIONS
-        self.extensions = QLabel(self)
-        self.extensions.move(10,200)
+        #self.extensions = QLabel(self)
+        #self.extensions.move(10,200)
             
         # Label image Warning/ok
         self.warning = QLabel(self)
@@ -315,8 +325,8 @@ class Second(QMainWindow):
                     self.warning.setPixmap(QPixmap(pathCORE+"/assets/ok.png"))
                 
                 # On set les valeur des champs TEXT
-                self.nbfile.setText("Fichiers : "+str(nbFiles))
-                self.nbfile.adjustSize()
+                #self.nbfile.setText("Fichiers : "+str(nbFiles))
+                #self.nbfile.adjustSize()
                 self.time.setText("Temps : "+str(duration)+" secondes")
                 self.time.adjustSize()
                 self.virus.setText("Virus : "+str(nbVirus))
@@ -324,12 +334,12 @@ class Second(QMainWindow):
                 if nbErrors != 0:
                     self.errors.setText("Une erreur est survenue pendant l'analyse !")
                     self.errors.adjustSize()
-                self.viruslist.setText(VirusLine)
-                self.viruslist.adjustSize()
+                #self.viruslist.setText(VirusLine)
+                #self.viruslist.adjustSize()
                 #self.virustotal.setText(VirusTotalLine)
-                self.virustotal.adjustSize()
-                self.extensions.setText(ExtensionsLine)
-                self.extensions.adjustSize()
+                #self.virustotal.adjustSize()
+                #self.extensions.setText(ExtensionsLine)
+                #self.extensions.adjustSize()
                 
             # GENERER LE REPORT
             report.write("########### Rapport du "+dt_string+" ###########\n")
@@ -360,6 +370,7 @@ if __name__ == '__main__':
     app = QApplication([])
     #app.setStyle('/opt/Code_Pr00filer/doc/dark_theme.qss')
     mainWindow = MainWindow()
+    mainWindow.location_on_the_screen()
     mainWindow.show()
 
     sys.exit(app.exec_())
