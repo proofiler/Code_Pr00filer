@@ -4,14 +4,11 @@
 import random, subprocess, os
 import json, hashlib
 import datetime
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QTimer, QRunnable, QThreadPool, pyqtSlot, QFile, QIODevice, QTextStream, QRect 
+from PyQt5.QtGui import QPixmap, QImage, QPalette, QBrush
+from PyQt5.QtCore import QTimer, QRunnable, QThreadPool, pyqtSlot, QFile, QIODevice, QTextStream, QRect , QSize
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QLabel, QProgressBar, QWidget, QFileDialog, QPlainTextEdit, QDesktopWidget)
 # ----- Scripts ------ #
 from scripts import *
-
-# fichier lastScan.log : Va contenir provisoirement le dernier scan, le fichier est vidé à chaque debut de scan
-# fichier report.log : Va contenir provisoirement le rapport final qui sera afficher à l'utilisateur à la fin du scan, le fichier est vidé à la fin du scan
 # fichier history.log : Va être rempli avec les report.log à la fin de chaque scan
 
 # ------ Globals ------ #
@@ -51,7 +48,7 @@ class MainWindow(QMainWindow):
 
         self.id = 0
         self.picturesDirectory = pathCORE+"/pictures/"
-        self.images = ["picture1.png", "picture2.png"]
+        self.images = ["picture1.png", "picture2.png", "picture3.png", "picture4.png"]
 
         self.image = QLabel(self)
 
@@ -110,14 +107,12 @@ class MainWindow(QMainWindow):
         # Et pour finir, un scan YARA
 
         ##### ----- EXTENSIONS ----- #####
-        print("Check EXTENSIONS")
         check_ext.main_checkExt()  
         self.progressBar.setValue(20)
 
         ##### ----- Check HASH ----- #####
         check_hash.main_checkHash()
 
-        print("CHECK CLAMAV")
         ##### ----- CLAMAV ----- #####
         option = "notdel"
         check_clamav.main_clamav(option)
@@ -126,7 +121,6 @@ class MainWindow(QMainWindow):
         data_json = check_clamav.clamav_virus_json()
         option = "del"
         check_clamav.main_clamav(option)
-        print(data_json) 
         # On sauvegarde le JSON pour le récupérer dans les autres fonctions de l'application
         with open(pathCORE+"/logs/data_json.json",'w') as outfile:
             json.dump(data_json, outfile)
@@ -149,7 +143,7 @@ class MainWindow(QMainWindow):
 class Second(QMainWindow):
     def __init__(self, parent=None):
         super(Second, self).__init__(parent)
-        self.setFixedSize(640, 480)
+        self.setFixedSize(800,550)
         
         # Label Temps du scan
         self.time = QLabel(self)
@@ -181,17 +175,8 @@ class Second(QMainWindow):
             
         # Label image Warning/ok
         self.warning = QLabel(self)
-        self.warning.move(250,10)
+        self.warning.move(0,0)
         self.Display()
-        
-        # Suppression report.log et lastScan.log pour les prochains scans
-        #os.remove(pathCORE+"/logs/lastScan.log")
-        #os.remove(pathCORE+"/logs/report.log")
-            
-        # Umount USB
-       #bashCommand = "sudo umount /media/pi/*"
-       #subprocess.call(bashCommand.split())
-
 
     # Fonction qui permet d'afficher le rapport final
     def Display(self):
@@ -253,7 +238,7 @@ class Second(QMainWindow):
                         dataFunctions.delete_file(virus_path)
                         print("[VT] "+virus_path+" supprimé !")
                     else:
-                        print("Ligne vide")
+                        print('')
                 print("Count_vt ="+str(count_vt))
             ## Info Extensions
             with open(pathCORE+"/logs/tmp_extensions.log","r") as extensions:
@@ -319,10 +304,23 @@ class Second(QMainWindow):
                         nbErrors_str = line_split[-1].strip()
                         nbErrors = int(nbErrors_str)
                 # Affichage des images Warning et OK pour l'état de la clé
+                nbVirus = len(data_json['viruses'])
+                nbFiles = nbFiles + nbVirus
+                
                 if int(nbVirus) != 0:
-                    self.warning.setPixmap(QPixmap(pathCORE+"/assets/warning.png"))
+                    pixmap = QPixmap(pathCORE+"/assets/attention.png")
+                    pixmap = pixmap.scaled(800,550)
+                    self.warning.setPixmap(pixmap)
+                    self.warning.setFixedSize(800,550)
+                    #self.oImage = QImage(pathCORE+"/assets/attention.png") 
+                    #self.sImage = oImage.scaled(QSize(640, 480)) 
                 else:
-                    self.warning.setPixmap(QPixmap(pathCORE+"/assets/ok.png"))
+                    pixmap = QPixmap(pathCORE+"/assets/scan_ok.png")
+                    pixmap = pixmap.scaled(800,550)
+                    self.warning.setPixmap(pixmap)
+                    self.warning.setFixedSize(800,550)
+                    #self.oImage = QImage(pathCORE+"/assets/attention.png")
+                    #self.sImage = oImage.scaled(QSize(640, 480)) 
                 
                 # On set les valeur des champs TEXT
                 #self.nbfile.setText("Fichiers : "+str(nbFiles))
@@ -345,11 +343,11 @@ class Second(QMainWindow):
             report.write("########### Rapport du "+dt_string+" ###########\n")
             report.write("# USB\n")
             report.write("UUID = "+dataFunctions.getUUID()+"\n")  
-            report.write("# CLAMAV\n")
+            report.write("# Info\n")
             report.write("Fichiers = "+str(nbFiles)+"\n")
             report.write("Erreurs = "+str(nbErrors)+"\n")
             report.write("Temps = "+str(duration)+"\n")
-            report.write("Ingected = "+str(nbVirus)+"\n")
+            report.write("Virus = "+str(nbVirus)+"\n")
             report.write("VirusTotal = "+str(count_vt)+"\n")
             report.write("Extensions = "+str(nbExt)+"\n")
             for line in datareport_array:
@@ -361,6 +359,10 @@ class Second(QMainWindow):
             data_json['duration'] = duration
             data_json['uuidUsb'] = dataFunctions.getUUID()
             data_json['nbErrors'] = nbErrors
+
+            # Unmount de la clé USB avec le script umountUSB.sh
+            rc = subprocess.call(pathCORE+"/scripts/umountUSB.sh")
+
             # On envoie la request POST au serveur
             dataFunctions.createRequest(data_json)
 
@@ -368,7 +370,6 @@ if __name__ == '__main__':
     import sys
 
     app = QApplication([])
-    #app.setStyle('/opt/Code_Pr00filer/doc/dark_theme.qss')
     mainWindow = MainWindow()
     mainWindow.location_on_the_screen()
     mainWindow.show()

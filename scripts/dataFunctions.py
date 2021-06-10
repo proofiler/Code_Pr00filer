@@ -133,22 +133,20 @@ def createRequest(data_json):
     data_json['login'] = admin_name
     data_json['hash'] = hash_user 
     json_data = json.dumps(data_json)
-    print(data_json)
 
+    print(data_json)
     # JSON to BASE64
     json_byte = json_data.encode("ascii")
     json_base64 = base64.b64encode(json_byte)
     json_base64 = json_base64.decode("ascii")
-    #print(json_base64)
 
     # Encrypt JSON
     encrypted = my_encrypt(json_base64,"5cd10f8a394a241beae003415a1b4569672696468c5aec18f880d1eb2043ad0c")
-    #print(encrypted)
 
     # Create POST
     mydata = { 'data' : encrypted }
     try:
-        r = requests.post(AddrServer, mydata)    
+        r = requests.post(AddrServer, mydata)
         if r.status_code == 200:
         # Send OK
             with open(core_path+"/logs/history.log",'a') as report:
@@ -169,10 +167,10 @@ def createRequest(data_json):
     except requests.exceptions.ConnectionError :
         with open(core_path+"logs/history.log",'a') as report:
             report.write("[!] Impossible de contacter le serveur - ConnectionError\n")
-
+    #End Report
     with open(core_path+"/logs/history.log",'a') as report:
         report.write("########### FIN ############ \n")
-
+    
 def file_as_byte(file):
     """
     This function is used to return the content of a file as byte. Used for the MD5 hash of the file in main.py

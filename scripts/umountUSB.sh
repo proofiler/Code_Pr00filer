@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# Get Mounted device
+# Get Mounted device path
 mount_point=$(mount -l | grep /media/pi | cut -d " " -f 3)
 
 # Umount 

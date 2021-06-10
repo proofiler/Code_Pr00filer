@@ -7,7 +7,7 @@ PATH_SCAN = /media/pi
 # Main user for the raspberry : default pi
 NAME_USER = pi
 # IP address of the main server to send all the data into the database
-ADDR_SERVER = http://192.168.1.28/Proofiler_web/data
+ADDR_SERVER = http://a15f2a21a3a4.ngrok.io/Proofiler_web/data
 # Name of the user used to send data to the database
 NAME_ADMIN = raspberry@pr00filer.com
 # Path of the file that contains the hash to authenticate the user for the database : default /doc/hash_user.txt
@@ -21,4 +21,4 @@ CHECK_VIRUSTOTAL_SCRIPT = True
 # Execute or not the Extension check : default True
 CHECK_EXTENSIONS_SCRIPT = True
 # Liste of all the extensions that are check and deleted into the USB.
-DATA_EXTENSIONS_DELETE = .pdf,.txt,.exe,.ps1
+DATA_EXTENSIONS_DELETE = .exe,.ps1
