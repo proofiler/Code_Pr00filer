@@ -174,3 +174,16 @@ def getDataExtensionsDelete(ConfigPathFile):
                 DataExtensionsDelete = Temp_split.split(",")
     return DataExtensionsDelete
 
+def getRulesPath(ConfigPathFile):
+    """
+    return the path where the yara-rules are stored
+    """
+    yara_rules_path = "doc/rules/"
+    line = ""
+    line_split = ""
+    with open(ConfigPathFile) as conf:
+        for line in conf:
+            line_split = line.split()
+            if line_split[0] == "YARA_RULES_PATH":
+                yara_rules_path = line_split[2]
+    return yara_rules_path

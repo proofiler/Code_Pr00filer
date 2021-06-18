@@ -130,8 +130,7 @@ class MainWindow(QMainWindow):
         self.progressBar.setValue(70)
 
         ##### ----- YARA ----- #####
-        check_yara.main_yara_check()
-        self.progressBar.setValue(100)
+        
             
     ## Affichage deuxième fenêtre pour le report.log
         self.dialog = Second(self)
@@ -182,22 +181,21 @@ class Second(QMainWindow):
     # Fonction qui permet d'afficher le rapport final
     def Display(self):
         # On récupère les données du json sauvegardé pendant le scan.
-        # data_json = Le JSON principal qui va etre utilisé pour le rapport.
         data_json = {}
         with open(pathCORE+"/logs/data_json.json","r") as json_file:
             data_json = json.load(json_file)
+
+
 
         # Ouverture du log history
         with open(pathCORE+"/logs/history.log","a") as report:
             nbErrors=0
             dt_string = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-
-            # Array utilisé pour stocké les virus trouvé pour les logs 
-            #   ex  : [VT] virus  /path/to/virus
+            VirusLine = "Liste des virus :\n"
+            ExtensionsLine = "Liste des extenions supprimées :\n"
             datareport_array = []
 
-            ## INFO check_HASH #################################################
-
+            ## INFO check_HASH
             # On ouvre le JSON qui contient les virus toruvé dans le module check_hash
             with open(pathCORE+"/logs/tmp_virus.json","r") as json_virus_file:
                 virus_json = json.load(json_virus_file)
@@ -215,8 +213,7 @@ class Second(QMainWindow):
                     # On ajoute les virus trouvé dans le check_hash dans l'array qui va etre ajouté au rapport final
                     datareport_array.append("[HC] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
             
-            ## Info VirusTotal #################################################
-
+            ## Info VirusTotal
             with open(pathCORE+"/logs/tmp_virustotal.log","r") as virustotal:
                 line_split = ""
                 count_vt = 0 # store the number of virus with VT
@@ -228,11 +225,13 @@ class Second(QMainWindow):
                         virus_name = line_split[4].strip() 
                         virus_path = line_split[0]
                         virus_hash = dataFunctions.get_sha256_hash(virus_path)
+                        print("[!] VT : "+str(count_vt)+" "+virus_name+" "+virus_path+" "+virus_hash)
                         # On ajoute le virus dans le JSON
                         data_json['viruses'].append({
                             'name':virus_name ,'hash':virus_hash
                         })
                         count_vt = count_vt + 1
+                        VirusLine = VirusLine+"-- "+str(count_vt)+" : "+virus_path+" "+virus_name+"\n"
                         datareport_array.append("[VT] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
                         
                         # On supprime le fichier trigger par VT
@@ -240,8 +239,8 @@ class Second(QMainWindow):
                         print("[VT] "+virus_path+" supprimé !")
                     else:
                         print('')
-            ## Info Extensions #################################################
-
+                print("Count_vt ="+str(count_vt))
+            ## Info Extensions
             with open(pathCORE+"/logs/tmp_extensions.log","r") as extensions:
                 line_split = ""
                 nbExt = 0
@@ -254,7 +253,7 @@ class Second(QMainWindow):
                 print("NB EXT = "+str(nbExt))
                 if nbExt == 0:
                     # Aucunes Extensions supprimées
-                    print('')
+                        ExtensionsLine = ExtensionsLine+"Aucune extenions supprimées\n"
                 else:
                     line_split = ""
                     for lines in extensions:
@@ -263,28 +262,10 @@ class Second(QMainWindow):
                             pass 
                         else:
                             Ext_path = line_split[0].strip()
+                            ExtensionsLine = ExtensionsLine+"-- "+Ext_path+"\n"
                             datareport_array.append("[EX] "+Ext_path+"\n")
-            ### Rapport YARA #################################################
 
-            # On récupère les virus trouvé avec yara
-            with open(pathCORE+"/logs/tmp_yara.json","r") as json_yara_file:
-                yara_json = json.load(json_yara_file)
-
-            nbYARA = len(yara_json['virus'])
-
-            if not 'virus' in yara_json and len(yara_json['virus']) == 0:
-                pass
-            else:
-                for virus in yara_json['virus']:
-                    virus_name = virus['name']
-                    virus_path = virus['path']
-                    virus_hash = virus['hash']
-                    data_json['viruses'].append({'name':virus_name ,'hash':virus_hash})
-                    # On ajoute les virus trouvé dans le check_hash dans l'array qui va etre ajouté au rapport final
-                    datareport_array.append("[YR] "+virus_path+" "+virus_name+" "+virus_hash+"\n")
-
-            ## Info clamav #################################################
-
+            ## Info clamav
             with open(pathCORE+"/logs/tmp_clamav.log","r") as clamav:
                 # fichier
                 nbFiles = dataFunctions.getNumberOfFiles(pathUSB)
@@ -315,6 +296,7 @@ class Second(QMainWindow):
                         virus_path = line_split[0]
                         #parcourir json au lieu du raport pour récupérer les info clamav
                         #virus_hash = dataFunctions.get_sha256_hash(virus_path)
+                        VirusLine = VirusLine+"-- "+str(counter)+" : "+virus_path+" "+virus_name+"\n"
                         datareport_array.append("[AV] "+virus_path+" "+virus_name+"\n")
                 # Nombre d'erreurs
                     if "errors:" in line:
@@ -330,13 +312,19 @@ class Second(QMainWindow):
                     pixmap = pixmap.scaled(800,550)
                     self.warning.setPixmap(pixmap)
                     self.warning.setFixedSize(800,550)
+                    #self.oImage = QImage(pathCORE+"/assets/attention.png") 
+                    #self.sImage = oImage.scaled(QSize(640, 480)) 
                 else:
                     pixmap = QPixmap(pathCORE+"/assets/scan_ok.png")
                     pixmap = pixmap.scaled(800,550)
                     self.warning.setPixmap(pixmap)
                     self.warning.setFixedSize(800,550)
+                    #self.oImage = QImage(pathCORE+"/assets/attention.png")
+                    #self.sImage = oImage.scaled(QSize(640, 480)) 
                 
                 # On set les valeur des champs TEXT
+                #self.nbfile.setText("Fichiers : "+str(nbFiles))
+                #self.nbfile.adjustSize()
                 self.time.setText("Temps : "+str(duration)+" secondes")
                 self.time.adjustSize()
                 self.virus.setText("Virus : "+str(nbVirus))
@@ -344,9 +332,13 @@ class Second(QMainWindow):
                 if nbErrors != 0:
                     self.errors.setText("Une erreur est survenue pendant l'analyse !")
                     self.errors.adjustSize()
-
-            
-
+                #self.viruslist.setText(VirusLine)
+                #self.viruslist.adjustSize()
+                #self.virustotal.setText(VirusTotalLine)
+                #self.virustotal.adjustSize()
+                #self.extensions.setText(ExtensionsLine)
+                #self.extensions.adjustSize()
+                
             # GENERER LE REPORT
             report.write("########### Rapport du "+dt_string+" ###########\n")
             report.write("# USB\n")
@@ -358,7 +350,6 @@ class Second(QMainWindow):
             report.write("Virus = "+str(nbVirus)+"\n")
             report.write("VirusTotal = "+str(count_vt)+"\n")
             report.write("Extensions = "+str(nbExt)+"\n")
-            report.write("Yara match = "+str(nbYARA)+"\n")
             for line in datareport_array:
                 report.write(line)
 

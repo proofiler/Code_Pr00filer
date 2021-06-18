@@ -57,5 +57,20 @@ sudo cp /opt/Code_Pr00filer/doc/insertUSB.service /etc/systemd/system/insertUSB.
 sudo systemctl enable insertUSB.service
 sudo service insertUSB start
 
+# Installation Yara-rules
+# Installer : sudo apt-get install automake libtool make gcc pkg-config
+# cd /tmp
+# wget https://github.com/VirusTotal/yara/archive/refs/tags/v4.1.0.tar.gz
+# tar -zxf v4.1.0.tar.gz
+# cd yara-4.1.0
+# chmod +x bootstrap.sh
+# ./bootstrap.sh
+# ./configure
+# make
+# sudo make install
+# sudo echo "/usr/local/lib" >> /etc/ld.so.conf
+# sudo ldconfig
+
+
 echo "[+] Fin du script"
 

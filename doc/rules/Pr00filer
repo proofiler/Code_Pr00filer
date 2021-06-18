@@ -1,0 +1,12 @@
+rule Pr00filer
+{
+    meta:
+	author = "AlrikRr"
+	date = "18/06/2021"
+	description = "Test yara-rules Pr00filer"
+
+    strings:
+        $a = "Pr00filer-yara-test"
+    condition:
+        $a
+}

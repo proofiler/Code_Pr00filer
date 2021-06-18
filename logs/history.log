@@ -1,235 +1,64 @@
-########### Config Update : 09/06/2021 22:23:21 ##########
-From : 86.238.91.4
-ADDR_SERVER : http://a15f2a21a3a4.ngrok.io/Proofiler_web/data
-DATA_EXTENSIONS_DELETE : .exe,.ps1
-[!] Virus Hash List Updated
-########### Config Update END ###########
-
-########### Rapport du 09/06/2021 22:34:24 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 7
-Erreurs = 0
-Temps = 5
-Virus = 3
-VirusTotal = 1
-Extensions = 2
-[HC] /media/pi/WINDOWS/virus virus 131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267
-[VT] /media/pi/WINDOWS/Kardon.exe.bak W32.AIDetect.malware2 fd0dfb173aff74429c6fed55608ee99a24e28f64ae600945e15bf5fce6406aee
-[EX] /media/pi/WINDOWS/test.exe
-[EX] /media/pi/WINDOWS/tutu.ps1
-[AV] /media/pi/WINDOWS/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0
-[+] Rapport envoyé au serveur
-########### FIN ############ 
-
-########### Rapport du 09/06/2021 22:38:25 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[+] Rapport envoyé au serveur
-########### FIN ############ [+] Rapport envoyé au serveur
-########### FIN ############ 
-########### Rapport du 09/06/2021 22:41:13 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[+] Rapport envoyé au serveur
-########### FIN ############ 
-########### Rapport du 09/06/2021 22:41:35 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[+] Rapport envoyé au serveur
-########### FIN ############ 
-########### Rapport du 09/06/2021 22:42:16 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[+] Rapport envoyé au serveur
-########### FIN ############ 
-########### Rapport du 09/06/2021 22:43:04 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[+] Rapport envoyé au serveur
-########### FIN ############ 
-########### Rapport du 09/06/2021 22:43:23 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
 [!] Impossible de contacter le serveur - Not 200
 ########### FIN ############ 
-########### Rapport du 10/06/2021 11:05:40 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 8
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:07:27 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 6
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:15:16 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:16:29 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:17:25 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:20:07 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:20:29 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:20:52 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:21:37 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:22:07 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:22:43 ###########
+########### Rapport du 18/06/2021 18:24:02 ###########
 # USB
 UUID = D82E-39A1
 # Info
 Fichiers = 5
 Erreurs = 0
-Temps = 5
+Temps = 3
+Virus = 0
+VirusTotal = 0
+Extensions = 0
+Yara match = 0
+########### Rapport du 18/06/2021 18:32:55 ###########
+# USB
+[!] Impossible de contacter le serveur - Not 200
+########### FIN ############ 
+########### Rapport du 18/06/2021 18:44:28 ###########
+# USB
+UUID = D82E-39A1
+# Info
+Fichiers = 4
+Erreurs = 0
+Temps = 3
+Virus = 0
+VirusTotal = 0
+Extensions = 0
+Yara match = 1
+[YR] /media/pi/WINDOWS/test.txt
+ Pr00filer aad225e2816c7ee4931150f01610001121cca1b92b619cd6c237910ecc43d5ac
+[!] Impossible de contacter le serveur - Not 200
+########### FIN ############ 
+########### Rapport du 18/06/2021 18:45:40 ###########
+# USB
+UUID = D82E-39A1
+# Info
+Fichiers = 4
+Erreurs = 0
+Temps = 3
+Virus = 0
+VirusTotal = 0
+Extensions = 0
+Yara match = 1
+[YR] /media/pi/WINDOWS/test.txt Pr00filer aad225e2816c7ee4931150f01610001121cca1b92b619cd6c237910ecc43d5ac
+[!] Impossible de contacter le serveur - Not 200
+########### FIN ############ 
+########### Rapport du 18/06/2021 18:48:37 ###########
+# USB
+UUID = D82E-39A1
+# Info
+Fichiers = 5
+Erreurs = 0
+Temps = 3
 Virus = 1
 VirusTotal = 0
 Extensions = 0
-[AV] /media/pi/WINDOWS/Blackenergy.bin: Xls.Dropper.Blackenergy-7082085-0
+Yara match = 1
+[YR] /media/pi/WINDOWS/test.txt Pr00filer aad225e2816c7ee4931150f01610001121cca1b92b619cd6c237910ecc43d5ac
 [!] Impossible de contacter le serveur - Not 200
 ########### FIN ############ 
-########### Rapport du 10/06/2021 11:25:01 ###########
+########### Rapport du 18/06/2021 18:49:04 ###########
 # USB
 UUID = D82E-39A1
 # Info
@@ -239,109 +68,4 @@ Temps = 3
 Virus = 0
 VirusTotal = 0
 Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 11:35:07 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:27:47 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:29:33 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:35:12 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:37:42 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 0
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-########### Rapport du 10/06/2021 14:43:46 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 1
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:44:06 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 1
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:49:16 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 1
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
-[!] Impossible de contacter le serveur - Not 200
-########### FIN ############ 
-########### Rapport du 10/06/2021 14:51:15 ###########
-# USB
-UUID = D82E-39A1
-# Info
-Fichiers = 4
-Erreurs = 1
-Temps = 3
-Virus = 0
-VirusTotal = 0
-Extensions = 0
+Yara match = 0

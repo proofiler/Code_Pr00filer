@@ -22,3 +22,5 @@ CHECK_VIRUSTOTAL_SCRIPT = True
 CHECK_EXTENSIONS_SCRIPT = True
 # Liste of all the extensions that are check and deleted into the USB.
 DATA_EXTENSIONS_DELETE = .exe,.ps1
+# Path ou sont stockes les yara rules 
+YARA_RULES_PATH = doc/rules

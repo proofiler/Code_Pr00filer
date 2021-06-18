@@ -181,6 +181,7 @@ def file_as_byte(file):
 def get_sha256_hash(path):
     """
     """
+    path = path.rstrip()
     return hashlib.sha256(file_as_byte(open(path, 'rb'))).hexdigest()
 
 def init_json():
