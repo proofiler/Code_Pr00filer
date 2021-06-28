@@ -77,3 +77,10 @@ Les communications avec le serveur et la raspberry utilise du chiffrement symét
 [ ] Revoir l'optimisation des modules (dossiers modules)
 [ ] Avoir la possibilité d'ajouter ou supprimer des modules facilement
 [ ] Revoir la personnalisation du fichier de config(avec install)
+
+Contributeurs:
+
+    Morrigan
+    Nyxott
+    AlrikRr
+    jvallend
